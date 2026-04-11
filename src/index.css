@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+  }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy-700 hover:bg-navy-800 text-white font-heading font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  .btn-outline {
+    @apply border-2 border-navy-700 text-navy-700 hover:bg-navy-700 hover:text-white font-heading font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .btn-white {
+    @apply bg-white text-navy-800 hover:bg-slate-100 font-heading font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm;
+  }
+  .section-tag {
+    @apply inline-block text-navy-600 font-body font-semibold text-xs uppercase tracking-widest mb-3;
+  }
+  .section-title {
+    @apply font-heading font-bold text-3xl md:text-4xl text-slate-800 leading-tight;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300;
+  }
+  .placeholder-img {
+    @apply bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center rounded-xl text-slate-400 font-body text-sm text-center p-6 gap-2;
+  }
+  .input-field {
+    @apply w-full border border-slate-200 rounded-xl px-4 py-3 font-body text-slate-800 text-sm focus:outline-none focus:border-navy-500 focus:ring-2 focus:ring-navy-100 transition bg-white;
+  }
+}
+
+/* Fade-in animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
