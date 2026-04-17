@@ -7,10 +7,10 @@ import { COURSES, FACULTY, BRANCHES, TESTIMONIALS } from '../data'
 
 // ─── STATS ────────────────────────────────────────────────────────────────────
 const STATS = [
-  { value: 65,    suffix: '+', label: 'Years of Legacy',   icon: '🏛️' },
-  { value: 10000, suffix: '+', label: 'Students Mentored', icon: '🎓' },
-  { value: 4.5,   suffix: '★', label: 'Average Rating',    icon: '⭐' },
-  { value: 3,     suffix: '',  label: 'Mumbai Branches',   icon: '📍' },
+  { value: 68,    suffix: '+', label: 'Years of Legacy',   icon: '🏛️' },
+  { value: 50000, suffix: '+', label: 'Students Mentored', icon: '🎓' },
+  { value: 4.6,   suffix: '★', label: 'Average Rating',    icon: '⭐' },
+  { value: 4,     suffix: '',  label: 'Mumbai Branches',   icon: '📍' },
 ]
 
 // ─── HERO ─────────────────────────────────────────────────────────────────────

@@ -1,101 +1,229 @@
-import React, { useState, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+"use client";
 
-const links = [
-  { to: '/',         label: 'Home' },
-  { to: '/courses',  label: 'Courses' },
-  { to: '/faculty',  label: 'Faculty' },
-  { to: '/branches', label: 'Branches' },
-  { to: '/about',    label: 'About' },
-  { to: '/contact',  label: 'Contact' },
-]
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Courses", href: "/courses" },
+  { label: "Faculty", href: "/faculty" },
+  { label: "Branches", href: "/branches" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Results", href: "/results" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open,     setOpen]     = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', fn)
-    return () => window.removeEventListener('scroll', fn)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const linkClass = ({ isActive }) =>
-    `font-heading font-medium text-sm px-4 py-2 rounded-lg transition-all duration-150 ${
-      isActive
-        ? 'text-navy-700 bg-navy-50'
-        : 'text-slate-600 hover:text-navy-700 hover:bg-slate-50'
-    }`
+  const isActive = (href) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur border-b border-slate-100'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-18">
-
-          {/* Logo */}
-          <Link to="/" className="flex flex-col leading-tight group">
-            <span className="font-heading font-black text-xl text-navy-800 group-hover:text-navy-600 transition-colors">
-              Srichand Classes
-            </span>
-            <span className="font-body text-navy-500 text-[10px] tracking-widest uppercase">
-              Est. 1958 · Mumbai
-            </span>
+    <>
+      <nav
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000,
+          background: "rgba(255,255,255,0.97)",
+          boxShadow: scrolled ? "0 2px 20px rgba(10,22,40,0.10)" : "none",
+          borderBottom: scrolled ? "none" : "1px solid #E5E0D8",
+          backdropFilter: scrolled ? "blur(8px)" : "none",
+          transition: "all 0.3s ease",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 24px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: 68,
+          }}
+        >
+          {/* ── Logo ── */}
+          <Link
+            href="/"
+            onClick={closeMenu}
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <img
+              src="/images/logo/logo.png"
+              alt="Srichand Classes"
+              style={{ height: 46, width: "auto", objectFit: "contain" }}
+            />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
-            {links.map(l => (
-              <NavLink key={l.to} to={l.to} end={l.to === '/'} className={linkClass}>
-                {l.label}
-              </NavLink>
-            ))}
-            <Link to="/contact" className="ml-3 btn-primary text-sm px-5 py-2">
-              Enroll Now
-            </Link>
-          </nav>
-
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition"
-            aria-label="Toggle menu"
+          {/* ── Desktop Links ── */}
+          <ul
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 4,
+              margin: 0,
+              padding: 0,
+              listStyle: "none",
+            }}
+            className="nav-desktop"
           >
-            <div className="w-5 h-0.5 bg-current mb-1 transition-all" />
-            <div className="w-5 h-0.5 bg-current mb-1 transition-all" />
-            <div className="w-5 h-0.5 bg-current transition-all" />
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={closeMenu}
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.92rem",
+                    fontWeight: 500,
+                    color: isActive(link.href) ? "var(--gold)" : "var(--navy)",
+                    padding: "6px 12px",
+                    borderRadius: 4,
+                    display: "block",
+                    transition: "color 0.2s ease",
+                    borderBottom: isActive(link.href)
+                      ? "2px solid var(--gold)"
+                      : "2px solid transparent",
+                  }}
+                  className="nav-link"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* ── Enquire Now CTA ── */}
+          <Link
+            href="/contact"
+            onClick={closeMenu}
+            className="btn btn-primary btn-sm nav-cta"
+          >
+            Enquire Now
+          </Link>
+
+          {/* ── Hamburger ── */}
+          <button
+            onClick={() => setMenuOpen((o) => !o)}
+            className="nav-hamburger"
+            aria-label="Toggle menu"
+            style={{
+              display: "none",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 5,
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: 6,
+              borderRadius: 6,
+            }}
+          >
+            {[0, 1, 2].map((i) => (
+              <span
+                key={i}
+                style={{
+                  display: "block",
+                  width: 24,
+                  height: 2,
+                  background: "var(--navy)",
+                  borderRadius: 2,
+                  transition: "var(--transition)",
+                  transform:
+                    menuOpen && i === 0
+                      ? "rotate(45deg) translate(5px, 5px)"
+                      : menuOpen && i === 2
+                        ? "rotate(-45deg) translate(5px, -5px)"
+                        : "none",
+                  opacity: menuOpen && i === 1 ? 0 : 1,
+                }}
+              />
+            ))}
           </button>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-white border-t border-slate-100 px-4 py-3 space-y-1 shadow-lg">
-          {links.map(l => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === '/'}
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                `block font-heading font-medium text-sm px-4 py-3 rounded-lg transition ${
-                  isActive ? 'text-navy-700 bg-navy-50' : 'text-slate-600 hover:text-navy-700 hover:bg-slate-50'
-                }`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="block btn-primary text-center mt-2"
+        {/* ── Mobile Drawer ── */}
+        <div
+          className="nav-drawer"
+          style={{
+            overflow: "hidden",
+            maxHeight: menuOpen ? "520px" : "0",
+            transition: "max-height 0.35s ease",
+            background: "var(--white)",
+            borderTop: menuOpen ? "1px solid var(--border)" : "none",
+          }}
+        >
+          <ul
+            style={{ padding: "12px 24px 20px", listStyle: "none", margin: 0 }}
           >
-            Enroll Now
-          </Link>
+            {NAV_LINKS.map((link) => (
+              <li
+                key={link.href}
+                style={{ borderBottom: "1px solid var(--border)" }}
+              >
+                <Link
+                  href={link.href}
+                  onClick={closeMenu}
+                  style={{
+                    display: "block",
+                    padding: "13px 0",
+                    fontFamily: "var(--font-body)",
+                    fontSize: "1rem",
+                    fontWeight: 500,
+                    color: isActive(link.href) ? "var(--gold)" : "var(--navy)",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            <li style={{ paddingTop: 16 }}>
+              <Link
+                href="/contact"
+                onClick={closeMenu}
+                className="btn btn-primary"
+                style={{ width: "100%", justifyContent: "center" }}
+              >
+                Enquire Now
+              </Link>
+            </li>
+          </ul>
         </div>
-      )}
-    </header>
-  )
+      </nav>
+
+      {/* ── Spacer so content doesn't hide under fixed navbar ── */}
+      <div style={{ height: 68 }} />
+
+      {/* ── Responsive styles ── */}
+      <style>{`
+        .nav-link:hover { color: var(--gold) !important; }
+
+        @media (max-width: 900px) {
+          .nav-desktop  { display: none !important; }
+          .nav-cta      { display: none !important; }
+          .nav-hamburger{ display: flex !important; }
+        }
+        @media (min-width: 901px) {
+          .nav-drawer { display: none !important; }
+        }
+      `}</style>
+    </>
+  );
 }
