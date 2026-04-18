@@ -45,17 +45,21 @@ export default function About() {
               <Link href="/contact" className="btn-primary">Get in Touch →</Link>
             </div>
 
-            {/* Founder placeholder */}
+            {/* Founder image — coming soon */}
             <div className="space-y-4">
-              <div className="placeholder-img h-72">
-                <span className="text-5xl">👤</span>
-                <span className="font-heading font-semibold text-slate-500 text-sm">Founder Image</span>
-                <span className="text-slate-400 text-xs">Replace with founder photo — add manually later</span>
+              <div
+                className="h-72 rounded-2xl flex flex-col items-center justify-center gap-3 text-slate-400"
+                style={{ background: '#f8fafc', border: '2px dashed #cbd5e1' }}
+              >
+                <span style={{ fontSize: '3rem' }}>👤</span>
+                <span className="font-heading font-semibold text-slate-400 text-sm text-center px-4">
+                  Founder Image Coming Soon
+                </span>
               </div>
               <div className="card p-6">
-                <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Founder Story</div>
-                <p className="font-body text-slate-400 text-sm italic leading-relaxed">
-                  [Founder story to be added here. Describe the founder's background, motivation for starting Srichand Classes, and vision for education in Mumbai.]
+                <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Our Founder</div>
+                <p className="font-body text-slate-400 text-sm leading-relaxed italic">
+                  The founder's story and photo will be added here soon.
                 </p>
               </div>
             </div>

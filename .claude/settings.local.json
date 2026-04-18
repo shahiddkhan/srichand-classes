@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3333\" -UseBasicParsing; $r.Content | Select-String -Pattern \"placeholder|Replace with|emoji|👨|👤|📚|🏫|img src\" -AllMatches | Select-Object -First 30 | ForEach-Object { $_.Line.Trim\\(\\) })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3333/faculty\" -UseBasicParsing; $content = $r.Content; $imgs = [regex]::Matches\\($content, 'src=\"\\([^\"]+\\)\"'\\) | ForEach-Object { $_.Groups[1].Value } | Where-Object { $_ -match 'images' }; $imgs; $placeholders = [regex]::Matches\\($content, 'placeholder-img|Replace with|Faculty Photo'\\) | ForEach-Object { $_.Value }; if \\($placeholders.Count -gt 0\\) { \"PLACEHOLDERS FOUND: $\\($placeholders -join ', '\\)\" } else { \"No placeholders found\" })",
+      "PowerShell($pages = @\\(\"/about\", \"/gallery\", \"/rankers\", \"/branches\", \"/courses\", \"/contact\"\\); foreach \\($p in $pages\\) { $r = Invoke-WebRequest -Uri \"http://localhost:3333$p\" -UseBasicParsing; $ph = [regex]::Matches\\($r.Content, 'placeholder-img|Replace with|Faculty Photo|Students Studying|Founder image'\\) | ForEach-Object { $_.Value }; if \\($ph.Count -gt 0\\) { \"$p : PLACEHOLDERS: $\\($ph -join ', '\\)\" } else { \"$p : OK\" } })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3333/about\" -UseBasicParsing; [regex]::Matches\\($r.Content, '.{0,80}\\(placeholder-img|Replace with\\).{0,80}'\\) | ForEach-Object { $_.Value.Trim\\(\\) })",
+      "Bash(curl -s http://localhost:3002)",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force '.next' -ErrorAction SilentlyContinue; Write-Output 'cleared'\")"
+    ]
+  }
+}

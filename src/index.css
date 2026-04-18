@@ -9,15 +9,15 @@
   --navy: #0a1628;
   --navy-mid: #152238;
   --navy-light: #1e3a5f;
-  --gold: #c9a84c;
-  --gold-light: #e8c97a;
-  --gold-pale: #fdf6e3;
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-pale: #eff6ff;
   --cream: #f8f6f1;
   --white: #ffffff;
   --text: #1a1a2e;
   --text-muted: #6b7280;
   --text-light: #9ca3af;
-  --border: #e5e0d8;
+  --border: #e2e8f0;
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "DM Sans", sans-serif;
@@ -30,7 +30,7 @@
   --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
   --shadow-md: 0 4px 24px rgba(10, 22, 40, 0.12);
   --shadow-lg: 0 8px 40px rgba(10, 22, 40, 0.16);
-  --shadow-gold: 0 4px 20px rgba(201, 168, 76, 0.25);
+  --shadow-accent: 0 4px 20px rgba(37, 99, 235, 0.25);
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: all 0.18s ease;
@@ -141,7 +141,7 @@ p {
   left: 0;
   width: 48px;
   height: 3px;
-  background: var(--gold);
+  background: var(--accent);
   border-radius: 2px;
 }
 
@@ -170,15 +170,15 @@ p {
 }
 
 .btn-primary {
-  background: var(--gold);
-  color: var(--navy);
-  border-color: var(--gold);
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
 }
 .btn-primary:hover {
-  background: var(--gold-light);
-  border-color: var(--gold-light);
+  background: var(--accent-light);
+  border-color: var(--accent-light);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-accent);
 }
 
 .btn-outline {
@@ -192,15 +192,28 @@ p {
   transform: translateY(-2px);
 }
 
-.btn-outline-gold {
+.btn-outline-accent {
   background: transparent;
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--accent);
+  border-color: var(--accent);
 }
-.btn-outline-gold:hover {
-  background: var(--gold);
-  color: var(--navy);
+.btn-outline-accent:hover {
+  background: var(--accent);
+  color: var(--white);
   transform: translateY(-2px);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
+  font-weight: 700;
+}
+.btn-white:hover {
+  background: var(--accent-pale);
+  border-color: var(--accent-pale);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-sm {
@@ -221,7 +234,7 @@ p {
 .card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
-  border-color: var(--gold);
+  border-color: var(--accent-light);
 }
 
 /* --- Chip / Badge --- */
@@ -231,9 +244,9 @@ p {
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 600;
-  background: var(--gold-pale);
-  color: var(--gold);
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: var(--accent-pale);
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 /* --- Section Label --- */
@@ -242,9 +255,50 @@ p {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent);
   margin-bottom: 12px;
   display: block;
+}
+
+/* --- Section Tag (Tailwind version) --- */
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-pale);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+/* --- Section Title --- */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+/* --- Placeholder Image Box --- */
+.placeholder-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radius-md);
+  width: 100%;
+  color: #94a3b8;
+  font-family: var(--font-body);
+  text-align: center;
+  padding: 24px;
 }
 
 /* --- Divider --- */

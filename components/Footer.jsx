@@ -19,9 +19,11 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-sm uppercase tracking-wider mb-4 text-slate-300">Quick Links</h4>
             <ul className="space-y-2.5">
-              {[['/', 'Home'], ['/courses', 'Courses'], ['/faculty', 'Faculty'],
-                ['/gallery', 'Gallery'], ['/rankers', 'Rankers'],
-                ['/branches', 'Branches'], ['/about', 'About'], ['/contact', 'Contact']].map(([href, label]) => (
+              {[
+                ['/', 'Home'], ['/courses', 'Courses'], ['/faculty', 'Faculty'],
+                ['/gallery', 'Gallery'], ['/movie', 'Movie'],
+                ['/branches', 'Branches'], ['/about', 'About'], ['/contact', 'Contact'],
+              ].map(([href, label]) => (
                 <li key={href}>
                   <Link href={href} className="font-body text-slate-400 hover:text-white text-sm transition-colors">
                     {label}
@@ -56,10 +58,16 @@ export default function Footer() {
                 <div key={b.name}>
                   <div className="font-body text-slate-500 text-xs">{b.name}</div>
                   <a href={`tel:+91${b.phone}`} className="font-heading font-semibold text-white hover:text-secondary text-sm transition-colors">
-                    +91 {b.phone.slice(0,5)} {b.phone.slice(5)}
+                    +91 {b.phone.slice(0, 5)} {b.phone.slice(5)}
                   </a>
                 </div>
               ))}
+            </div>
+            <div className="mt-5 pt-4 border-t border-white/10">
+              <div className="font-body text-slate-500 text-xs mb-1">Office Hours</div>
+              <div className="font-body text-slate-300 text-xs leading-relaxed">
+                Mon – Sat: 11:00 AM – 8:00 PM
+              </div>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ function Hero() {
             <h1 className="font-heading font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6">
               68+ Years of
               <br />
-              <span className="text-yellow-300">Academic</span>
+              <span className="text-secondary">Academic</span>
               <br />
               Excellence
             </h1>
@@ -35,24 +35,23 @@ function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/courses" className="btn-white text-primary">
+              <Link href="/courses" className="btn-white">
                 Explore Courses
               </Link>
-              <Link
-                href="/branches"
-                className="border-2 border-white/60 text-white hover:bg-white hover:text-primary font-heading font-semibold px-7 py-3 rounded-xl transition-all duration-200 inline-block"
-              >
-                Contact Branch
+              <Link href="/contact" className="btn border-2 border-white/70 text-white hover:bg-white hover:text-navy transition-all duration-200">
+                Contact Us
               </Link>
             </div>
           </div>
 
-          {/* Image placeholder */}
+          {/* Hero image */}
           <div className="hidden lg:block animate-fade-up delay-200">
-            <div className="placeholder-img h-96 border-white/25 bg-white/10 text-white/60">
-              <span className="text-6xl">🏫</span>
-              <span className="font-heading font-semibold">Student Classroom Image</span>
-              <span className="text-white/40 text-xs">Replace with actual classroom photo</span>
+            <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ height: '24rem' }}>
+              <img
+                src="/images/farewell/WhatsApp Image 2026-04-15 at 11.29.45 AM.jpeg"
+                alt="Srichand Classes students"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+              />
             </div>
           </div>
         </div>
@@ -109,10 +108,12 @@ function AboutStrip() {
             <Link href="/about" className="btn-primary">Our Story →</Link>
           </div>
           <div className="relative">
-            <div className="placeholder-img h-80">
-              <span className="text-5xl">📚</span>
-              <span className="font-heading font-semibold text-slate-500">Students Studying Image</span>
-              <span className="text-slate-400 text-xs">Replace with actual photo</span>
+            <div className="rounded-2xl overflow-hidden shadow-lg h-80">
+              <img
+                src="/images/picnic/WhatsApp Image 2026-04-15 at 11.25.39 AM.jpeg"
+                alt="Srichand Classes students"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-brand-gradient text-white rounded-2xl px-6 py-4 shadow-xl">
               <div className="font-heading font-black text-3xl">10,000+</div>
@@ -125,6 +126,17 @@ function AboutStrip() {
   )
 }
 
+const RESULT_IMGS = [
+  { src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg', label: 'OLGC 2025' },
+  { src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg', label: 'OLGC 2024' },
+  { src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg', label: 'Guru Nanak' },
+  { src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg', label: 'D.S.' },
+  { src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg', label: 'Fatima' },
+  { src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg', label: 'Class Topper' },
+  { src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg', label: 'SSC 2025' },
+  { src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg', label: 'SSC 2024' },
+]
+
 // ─── RESULTS ───────────────────────────────────────────────────────────────────
 function Results() {
   return (
@@ -135,7 +147,7 @@ function Results() {
           <span className="section-tag text-secondary">Academic Success</span>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white">Results That Define Excellence</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {[
             { icon: '🏅', title: 'Board Toppers', sub: 'Every Year' },
             { icon: '📈', title: '90%+ Results',  sub: 'Consistent across boards' },
@@ -150,7 +162,20 @@ function Results() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-10">
+
+        {/* Results photo grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+          {RESULT_IMGS.map(r => (
+            <div key={r.label} className="relative rounded-xl overflow-hidden" style={{ aspectRatio: '4/3' }}>
+              <img src={r.src} alt={`${r.label} results`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2">
+                <span className="font-heading font-semibold text-white text-xs">{r.label}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
           <Link href="/rankers" className="btn-white text-primary inline-block">View Our Rankers →</Link>
         </div>
       </div>

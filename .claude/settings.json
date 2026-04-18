@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Sleep -Seconds 6; try { $r = Invoke-WebRequest -Uri \"http://localhost:3333\" -UseBasicParsing -TimeoutSec 8; \"Home OK: $\\($r.StatusCode\\)\" } catch { \"Home FAIL: $_\" }; try { $r2 = Invoke-WebRequest -Uri \"http://localhost:3333/movie\" -UseBasicParsing -TimeoutSec 8; \"Movie OK: $\\($r2.StatusCode\\)\" } catch { \"Movie FAIL: $_\" }; try { $r3 = Invoke-WebRequest -Uri \"http://localhost:3333/rankers\" -UseBasicParsing -TimeoutSec 8; \"Rankers OK: $\\($r3.StatusCode\\)\" } catch { \"Rankers FAIL: $_\" })",
+      "PowerShell(Start-Sleep -Seconds 5; try { $r = Invoke-WebRequest -Uri \"http://localhost:3333\" -UseBasicParsing -TimeoutSec 15; \"Home OK: $\\($r.StatusCode\\)\" } catch { \"Home FAIL: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(Start-Sleep -Seconds 6; try { $r = Invoke-WebRequest -Uri \"http://localhost:3333\" -UseBasicParsing -TimeoutSec 12; \"Home OK: $\\($r.StatusCode\\)\"; $gold = [regex]::Matches\\($r.Content, 'text-yellow|gold|#c9a8|fdf6e3'\\) | ForEach-Object { $_.Value }; if \\($gold.Count -gt 0\\) { \"Gold remnants: $\\($gold -join ', '\\)\" } else { \"No gold found\" } } catch { \"Home FAIL: $\\($_.Exception.Message\\)\" })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3333\" -UseBasicParsing; [regex]::Matches\\($r.Content, '.{0,60}text-yellow.{0,60}'\\) | ForEach-Object { $_.Value.Trim\\(\\) } | Select-Object -Unique)",
+      "PowerShell($pages = @\\('/', '/courses', '/faculty', '/gallery', '/movie', '/branches', '/about', '/contact', '/rankers'\\); foreach \\($p in $pages\\) { try { $r = Invoke-WebRequest -Uri \"http://localhost:3333$p\" -UseBasicParsing -TimeoutSec 10; $gold = [regex]::Matches\\($r.Content, 'text-yellow|gold|var\\\\\\(--gold\\\\\\)|fdf6e3|#c9a8'\\).Count; \"$p : Status $\\($r.StatusCode\\) | Gold hits: $gold\" } catch { \"$p : FAIL - $\\($_.Exception.Message\\)\" } })",
+      "Bash(node --input-type=module)",
+      "Bash(npx next *)"
+    ]
+  }
+}

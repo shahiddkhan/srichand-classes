@@ -1,26 +1,101 @@
-/**
- * Gallery Data File
- * ─────────────────
- * Add your images and videos here after placing them in:
- *   /public/gallery/images/   ← for images
- *   /public/gallery/videos/   ← for videos
- *
- * Image example:
- *   { type: 'image', title: 'Classroom Teaching', category: 'Classroom', src: '/gallery/images/image1.jpg' }
- *
- * Video example:
- *   { type: 'video', title: 'Annual Day 2024', category: 'Events', src: '/gallery/videos/video1.mp4' }
- *
- * Available categories (add more as needed):
- *   Classroom | Events | Results | Faculty | Facilities | Celebrations
- */
-
 const galleryData = [
-  // ── ADD YOUR ITEMS BELOW ────────────────────────────────────────────────────
-  // { type: 'image', title: 'Classroom Teaching', category: 'Classroom', src: '/gallery/images/image1.jpg' },
-  // { type: 'image', title: 'Science Lab',        category: 'Facilities', src: '/gallery/images/image2.jpg' },
-  // { type: 'video', title: 'Annual Day 2024',    category: 'Events',    src: '/gallery/videos/video1.mp4' },
-  // ── END OF DATA ─────────────────────────────────────────────────────────────
+  // ── FAREWELL ────────────────────────────────────────────────────────────────
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.45 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.46 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.47 AM (1).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.47 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.48 AM (1).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.48 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.50 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.53 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.54 AM (1).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.54 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.56 AM (1).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.29.56 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.33.12 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.34.20 AM (1).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.34.20 AM (2).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.34.20 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.34.21 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.34.53 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.35.19 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.36.19 AM (1).jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.36.19 AM.jpeg' },
+  { type: 'image', title: 'Farewell', category: 'Farewell', src: '/images/farewell/WhatsApp Image 2026-04-15 at 11.36.21 AM.jpeg' },
+
+  // ── PICNIC ──────────────────────────────────────────────────────────────────
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.39 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.39 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.40 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.40 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.41 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.41 AM (2).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.41 AM (3).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.25.41 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.26.28 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.27.16 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.27.17 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.28.17 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.28.17 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.28.20 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.12 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.12 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.13 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.14 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.14 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.16 AM (1).jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.16 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.17 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.32.31 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.34.17 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.34.19 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.34.51 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.34.52 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.34.53 AM.jpeg' },
+  { type: 'image', title: 'Picnic', category: 'Picnic', src: '/images/picnic/WhatsApp Image 2026-04-15 at 11.36.55 AM.jpeg' },
+
+  // ── SPL ─────────────────────────────────────────────────────────────────────
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 11.47.02 AM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.07 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.08 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.08 PM (2).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.08 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.09 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.09 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.10 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.12 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.12 PM (2).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.12 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.13 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.13 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.14 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.14 PM (2).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.14 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.15 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.15 PM (2).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.15 PM (3).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.15 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.00.16 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.38 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.38 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.39 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.43 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.44 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.44 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.45 PM (1).jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.45 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.48 PM.jpeg' },
+  { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.52 PM.jpeg' },
+
+  // ── RESULTS ─────────────────────────────────────────────────────────────────
+  { type: 'image', title: 'OLGC 2025', category: 'Results', src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { type: 'image', title: 'OLGC 2024', category: 'Results', src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg' },
+  { type: 'image', title: 'Guru Nanak', category: 'Results', src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg' },
+  { type: 'image', title: 'D.S.', category: 'Results', src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg' },
+  { type: 'image', title: 'Fatima', category: 'Results', src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { type: 'image', title: 'Class Topper', category: 'Results', src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+  { type: 'image', title: 'SSC 2025', category: 'Results', src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { type: 'image', title: 'SSC 2024', category: 'Results', src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
 ]
 
 export default galleryData

@@ -79,10 +79,13 @@ function BranchCard({ b }) {
             +91 {b.phone}
           </a>
 
+          <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Hours</div>
+          <p className="font-body text-slate-600 text-sm mb-6">Mon – Sat: 11:00 AM – 8:00 PM</p>
+
           <div className="flex gap-3">
             <a
               href={`tel:+91${b.phone}`}
-              className="flex-1 flex items-center justify-center gap-2 bg-primary/10 hover:bg-primary text-primary hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl transition-all"
+              className="flex-1 flex items-center justify-center gap-2 bg-primary/10 hover:bg-primary text-primary hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-lg transition-all duration-200 hover:scale-[1.02]"
             >
               📞 Call
             </a>
@@ -90,12 +93,12 @@ function BranchCard({ b }) {
               href={`https://wa.me/91${b.phone}?text=Hello%2C%20I%20am%20enquiring%20about%20Srichand%20Classes%20${b.name}%20branch.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 bg-green-50 hover:bg-green-600 text-green-600 hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl transition-all"
+              className="flex-1 flex items-center justify-center gap-2 bg-green-50 hover:bg-green-600 text-green-600 hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-lg transition-all duration-200 hover:scale-[1.02]"
             >
               💬 WhatsApp
             </a>
           </div>
-          <Link href="/contact" className="btn-primary text-sm text-center w-full mt-3 py-3 block">
+          <Link href="/contact" className="btn btn-primary text-sm text-center w-full mt-3 block">
             Enquire Now
           </Link>
         </div>

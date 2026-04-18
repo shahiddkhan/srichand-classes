@@ -11,6 +11,7 @@ const FACULTY = [
     badge: 'Director & Senior Faculty',
     badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
     borderColor: 'border-blue-500',
+    image: '/images/faculty/vinesh thariani.jpeg',
     bio: 'Mr. Vinesh Thariani is the founder-director of Srichand Classes and has been guiding students for over three decades. His mastery of Mathematics across school and junior college levels has produced hundreds of board toppers.',
     subjects: ['Mathematics (School)', 'Mathematics (XI–XII)', 'CA Foundation'],
     achievements: [
@@ -27,6 +28,7 @@ const FACULTY = [
     badge: 'Senior Faculty',
     badgeColor: 'bg-pink-50 text-pink-700 border-pink-200',
     borderColor: 'border-pink-500',
+    image: '/images/faculty/vidhi dalal.jpeg',
     bio: 'Mrs. Vidhi Dalal is a Commerce specialist who brings clarity and structure to Accountancy and Economics. Her methodical approach and deep understanding of HSC Commerce patterns have helped students consistently achieve distinction.',
     subjects: ['Accountancy (XI–XII)', 'Economics (XI–XII)', 'OCM'],
     achievements: [
@@ -43,6 +45,7 @@ const FACULTY = [
     badge: 'Senior Faculty',
     badgeColor: 'bg-green-50 text-green-700 border-green-200',
     borderColor: 'border-green-500',
+    image: '/images/faculty/sandeep thariani.jpeg',
     bio: 'Mr. Sandeep Thariani heads the Science department at Srichand Classes. His engaging teaching style makes complex Chemistry and Science concepts accessible and memorable for students preparing for board exams.',
     subjects: ['Science (VIII–X)', 'Chemistry (XI–XII)', 'NEET preparation'],
     achievements: [
@@ -59,6 +62,7 @@ const FACULTY = [
     badge: 'Faculty',
     badgeColor: 'bg-purple-50 text-purple-700 border-purple-200',
     borderColor: 'border-purple-500',
+    image: '/images/faculty/sanjeev thariani.jpeg',
     bio: 'Mr. Sanjeev Thariani specialises in English language and Social Studies. His focus on writing skills, answer structure, and presentation has helped students score markedly higher in language papers.',
     subjects: ['English (VIII–X)', 'Geography', 'Social Studies', 'Hindi/Marathi'],
     achievements: [
@@ -75,6 +79,7 @@ const FACULTY = [
     badge: 'Faculty',
     badgeColor: 'bg-cyan-50 text-cyan-700 border-cyan-200',
     borderColor: 'border-cyan-500',
+    image: '/images/faculty/kunal thariani.jpeg',
     bio: 'Mr. Kunal Thariani handles Physics for junior college and competitive exam students. His strong analytical background and problem-solving approach are particularly valued by JEE and MHTCET aspirants.',
     subjects: ['Physics (XI–XII)', 'JEE preparation', 'MHTCET preparation'],
     achievements: [
@@ -91,6 +96,7 @@ const FACULTY = [
     badge: 'Faculty',
     badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200',
     borderColor: 'border-indigo-500',
+    image: '/images/faculty/harsh thariani.jpeg',
     bio: 'Mr. Harsh Thariani is a Mathematics and professional finance specialist. He handles higher Mathematics for junior college students and provides coaching for ACCA and CA Foundation examinations.',
     subjects: ['Mathematics (XI–XII)', 'ACCA coaching', 'CA Foundation'],
     achievements: [
@@ -120,10 +126,13 @@ function FacultyModal({ member, onClose }) {
         <div className="grid md:grid-cols-2">
           {/* Left — image */}
           <div className={`bg-slate-50 p-8 flex flex-col items-center justify-center border-r border-slate-100 border-b-4 ${member.borderColor} rounded-l-2xl`}>
-            <div className="placeholder-img w-full h-52 mb-4">
-              <span className="text-5xl">👨‍🏫</span>
-              <span className="text-slate-400 text-xs font-heading font-medium">Faculty Portrait Image</span>
-              <span className="text-slate-300 text-xs">Replace with actual photo</span>
+            <div className="w-full h-52 rounded-xl overflow-hidden mb-4 bg-slate-100">
+              <img
+                src={member.image}
+                alt={member.name}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                onError={e => { e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<div style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem">👨‍🏫</div>' }}
+              />
             </div>
             <div className={`text-xs font-heading font-semibold px-3 py-1 rounded-full border ${member.badgeColor}`}>
               {member.badge}
@@ -188,11 +197,16 @@ export default function Faculty() {
                 onClick={() => setActive(m)}
                 className="card cursor-pointer group overflow-hidden"
               >
-                {/* Photo placeholder */}
-                <div className={`placeholder-img h-56 rounded-none rounded-t-2xl border-0 border-b-4 ${m.borderColor} bg-slate-50`}>
-                  <span className="text-5xl">👨‍🏫</span>
-                  <span className="text-slate-400 text-xs font-heading font-medium">Faculty Photo</span>
-                  <span className="text-slate-300 text-xs">Replace with actual photo</span>
+                {/* Faculty photo */}
+                <div className={`h-56 rounded-t-2xl border-b-4 ${m.borderColor} overflow-hidden bg-slate-100`}>
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', transition: 'transform 0.5s ease' }}
+                    onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
+                    onMouseLeave={e => e.target.style.transform = 'scale(1)'}
+                    onError={e => { e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<div style="height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:#f1f5f9">👨‍🏫</div>' }}
+                  />
                 </div>
 
                 <div className="p-6">
@@ -202,7 +216,7 @@ export default function Faculty() {
                   <h3 className="font-heading font-bold text-dark text-lg group-hover:text-primary transition-colors">{m.name}</h3>
                   <p className="font-body text-primary text-sm font-semibold mt-0.5 mb-3">{m.subject}</p>
                   <p className="font-body text-slate-500 text-sm leading-relaxed line-clamp-2">{m.bio}</p>
-                  <button className="mt-4 text-primary font-heading font-semibold text-sm hover:underline">
+                  <button className="mt-4 btn btn-outline-accent btn-sm w-full text-center text-sm">
                     View Profile →
                   </button>
                 </div>
