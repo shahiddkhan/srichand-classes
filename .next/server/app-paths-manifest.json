@@ -1,9 +1,4 @@
 {
   "/page": "app/page.js",
-  "/rankers/page": "app/rankers/page.js",
-  "/gallery/page": "app/gallery/page.js",
-  "/faculty/page": "app/faculty/page.js",
-  "/about/page": "app/about/page.js",
-  "/not-found": "app/not-found.js",
-  "/contact/page": "app/contact/page.js"
+  "/faculty/page": "app/faculty/page.js"
 }
