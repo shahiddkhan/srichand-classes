@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const STATS = [
   { value: 68,    suffix: '+',  label: 'Years of Legacy',      icon: '🏛️' },
-  { value: 10000, suffix: '+',  label: 'Students Mentored',    icon: '🎓' },
+  { value: 50000, suffix: '+',  label: 'Students Mentored',    icon: '🎓' },
   { value: 4,     suffix: '',   label: 'Mumbai Branches',      icon: '📍' },
   { value: 4.6,   suffix: '★',  label: 'Google Rating',        icon: '⭐' },
 ]

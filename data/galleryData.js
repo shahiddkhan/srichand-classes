@@ -96,6 +96,13 @@ const galleryData = [
   { type: 'image', title: 'Class Topper', category: 'Results', src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
   { type: 'image', title: 'SSC 2025', category: 'Results', src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
   { type: 'image', title: 'SSC 2024', category: 'Results', src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+
+  // ── MOVIE ────────────────────────────────────────────────────────────────────
+  { type: 'image', title: 'Movie Outing', category: 'Movie', src: '/images/movie/WhatsApp Image 2026-04-15 at 11.46.00 AM.jpeg' },
+  { type: 'image', title: 'Movie Outing', category: 'Movie', src: '/images/movie/WhatsApp Image 2026-04-15 at 11.46.00 AM (1).jpeg' },
+  { type: 'image', title: 'Movie Outing', category: 'Movie', src: '/images/movie/WhatsApp Image 2026-04-15 at 11.46.00 AM (2).jpeg' },
+  { type: 'image', title: 'Movie Outing', category: 'Movie', src: '/images/movie/WhatsApp Image 2026-04-15 at 11.46.00 AM (3).jpeg' },
+  { type: 'image', title: 'Movie Outing', category: 'Movie', src: '/images/movie/WhatsApp Image 2026-04-15 at 11.46.01 AM.jpeg' },
 ]
 
 export default galleryData

@@ -75,12 +75,12 @@ function BranchCard({ b }) {
           <p className="font-body text-slate-700 leading-relaxed whitespace-pre-line mb-6">{b.address}</p>
 
           <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-3">Phone</div>
-          <a href={`tel:+91${b.phone}`} className="font-heading font-bold text-dark hover:text-primary text-xl transition-colors block mb-7">
+          <a href={`tel:+91${b.phone}`} className="font-heading font-bold text-dark hover:text-primary text-xl transition-colors block mb-7" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>
             +91 {b.phone}
           </a>
 
           <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Hours</div>
-          <p className="font-body text-slate-600 text-sm mb-6">Mon – Sat: 11:00 AM – 8:00 PM</p>
+          <p className="font-body text-slate-600 text-sm mb-6" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>Mon – Sat: 11:00 AM – 8:00 PM</p>
 
           <div className="flex gap-3">
             <a
@@ -146,7 +146,7 @@ export default function Branches() {
               <div key={b.id} className="card p-5 text-center">
                 <div className="text-3xl mb-2">{b.icon}</div>
                 <div className="font-heading font-bold text-dark text-sm mb-1">{b.name}</div>
-                <a href={`tel:+91${b.phone}`} className="font-body text-primary hover:text-secondary text-sm transition-colors">
+                <a href={`tel:+91${b.phone}`} className="font-body text-primary hover:text-secondary text-sm transition-colors" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>
                   +91 {b.phone}
                 </a>
               </div>

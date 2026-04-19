@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import TestimonialsSection from '../components/TestimonialsSection'
 import StatsSection from '../components/StatsSection'
+import ResultsSection from '../components/ResultsSection'
 
 // ─── HERO ──────────────────────────────────────────────────────────────────────
 function Hero() {
@@ -19,7 +20,7 @@ function Hero() {
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 mb-7">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="font-body text-white/90 text-sm font-medium">Admissions Open 2024–25</span>
+              <span className="font-body text-white/90 text-sm font-medium">Admissions Open 2025–26</span>
             </div>
 
             <h1 className="font-heading font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6">
@@ -45,14 +46,40 @@ function Hero() {
           </div>
 
           {/* Hero image */}
-          <div className="hidden lg:block animate-fade-up delay-200">
-            <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ height: '24rem' }}>
+          <div className="hidden lg:flex lg:flex-col lg:items-center animate-fade-up delay-200">
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '420px',
+                height: '520px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                boxShadow: '0 24px 60px rgba(0,0,0,0.35)',
+              }}
+            >
               <img
-                src="/images/farewell/WhatsApp Image 2026-04-15 at 11.29.45 AM.jpeg"
+                src="/images/farewell/WhatsApp Image 2026-04-15 at 11.29.48 AM (1).jpeg"
                 alt="Srichand Classes students"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center 20%',
+                  display: 'block',
+                }}
               />
             </div>
+            <p style={{
+              textAlign: 'center',
+              marginTop: '10px',
+              color: 'rgba(255,255,255,0.75)',
+              fontFamily: 'var(--font-body)',
+              fontWeight: 500,
+              fontSize: '0.85rem',
+              letterSpacing: '0.04em',
+            }}>
+              SSC Batch 2025–26
+            </p>
           </div>
         </div>
       </div>
@@ -116,7 +143,7 @@ function AboutStrip() {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-brand-gradient text-white rounded-2xl px-6 py-4 shadow-xl">
-              <div className="font-heading font-black text-3xl">10,000+</div>
+              <div className="font-heading font-black text-3xl">50,000+</div>
               <div className="font-body text-white/80 text-xs mt-0.5">Students Mentored</div>
             </div>
           </div>
@@ -126,62 +153,6 @@ function AboutStrip() {
   )
 }
 
-const RESULT_IMGS = [
-  { src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg', label: 'OLGC 2025' },
-  { src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg', label: 'OLGC 2024' },
-  { src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg', label: 'Guru Nanak' },
-  { src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg', label: 'D.S.' },
-  { src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg', label: 'Fatima' },
-  { src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg', label: 'Class Topper' },
-  { src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg', label: 'SSC 2025' },
-  { src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg', label: 'SSC 2024' },
-]
-
-// ─── RESULTS ───────────────────────────────────────────────────────────────────
-function Results() {
-  return (
-    <section className="py-20 bg-dark relative overflow-hidden">
-      <div className="absolute inset-0 bg-brand-gradient opacity-5" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="section-tag text-secondary">Academic Success</span>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-white">Results That Define Excellence</h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {[
-            { icon: '🏅', title: 'Board Toppers', sub: 'Every Year' },
-            { icon: '📈', title: '90%+ Results',  sub: 'Consistent across boards' },
-            { icon: '⭐', title: '4.8 / 5 Rating',sub: 'Parent satisfaction' },
-          ].map(r => (
-            <div key={r.title} className="flex gap-4 items-center bg-white/5 border border-white/10 rounded-2xl px-6 py-5">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-2xl flex-shrink-0">{r.icon}</div>
-              <div>
-                <div className="font-heading font-bold text-white text-lg">{r.title}</div>
-                <div className="font-body text-slate-400 text-sm">{r.sub}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Results photo grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-          {RESULT_IMGS.map(r => (
-            <div key={r.label} className="relative rounded-xl overflow-hidden" style={{ aspectRatio: '4/3' }}>
-              <img src={r.src} alt={`${r.label} results`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2">
-                <span className="font-heading font-semibold text-white text-xs">{r.label}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <Link href="/rankers" className="btn-white text-primary inline-block">View Our Rankers →</Link>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // ─── ADMISSIONS CTA ────────────────────────────────────────────────────────────
 function AdmissionsCTA() {
@@ -209,7 +180,7 @@ export default function Home() {
       <QuickCourses />
       <StatsSection />
       <AboutStrip />
-      <Results />
+      <ResultsSection />
       <TestimonialsSection />
       <AdmissionsCTA />
     </>

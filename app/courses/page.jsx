@@ -143,7 +143,7 @@ export default function Courses() {
       />
 
       {/* Quick jump nav */}
-      <section className="py-6 bg-white border-b border-slate-100 sticky top-[70px] z-30">
+      <section className="py-6 bg-white border-b border-slate-100 sticky top-16 md:top-[70px] z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 justify-center">
             {[

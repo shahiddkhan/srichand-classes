@@ -1,89 +1,19 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 import PageBanner from '../../components/PageBanner'
 import galleryData from '../../data/galleryData'
+import { useLightbox } from '../../components/LightboxProvider'
 
 const ALL_CATS = ['All', ...Array.from(new Set(galleryData.map(i => i.category)))]
 
-function Lightbox({ item, onClose, onPrev, onNext }) {
-  const handleKey = useCallback((e) => {
-    if (e.key === 'Escape')     onClose()
-    if (e.key === 'ArrowLeft')  onPrev()
-    if (e.key === 'ArrowRight') onNext()
-  }, [onClose, onPrev, onNext])
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKey)
-    document.body.classList.add('modal-open')
-    return () => {
-      window.removeEventListener('keydown', handleKey)
-      document.body.classList.remove('modal-open')
-    }
-  }, [handleKey])
-
-  if (!item) return null
-
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 lightbox-overlay"
-      style={{ background: 'rgba(10,22,40,0.92)', backdropFilter: 'blur(6px)' }}
-      onClick={onClose}
-    >
-      {/* Close */}
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/30 text-white text-2xl font-bold transition-all z-10"
-      >×</button>
-
-      {/* Prev */}
-      <button
-        onClick={e => { e.stopPropagation(); onPrev() }}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/30 text-white text-2xl transition-all z-10"
-      >‹</button>
-
-      {/* Next */}
-      <button
-        onClick={e => { e.stopPropagation(); onNext() }}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/30 text-white text-2xl transition-all z-10"
-      >›</button>
-
-      {/* Content — zoom-in animation */}
-      <div
-        className="max-w-4xl w-full lightbox-content"
-        onClick={e => e.stopPropagation()}
-      >
-        {item.type === 'video' ? (
-          <video
-            src={item.src}
-            controls autoPlay
-            className="w-full rounded-2xl max-h-[80vh] object-contain bg-black"
-          />
-        ) : (
-          <img
-            src={item.src}
-            alt={item.title || 'Gallery image'}
-            className="w-full rounded-2xl max-h-[80vh] object-contain shadow-2xl"
-          />
-        )}
-        {item.title && (
-          <p className="text-center text-white/80 font-body text-sm mt-4">{item.title}</p>
-        )}
-      </div>
-    </div>
-  )
-}
-
 export default function Gallery() {
-  const [cat,    setCat]    = useState('All')
-  const [active, setActive] = useState(null)
-  const [idx,    setIdx]    = useState(0)
+  const [cat, setCat] = useState('All')
+  const { openLightbox } = useLightbox()
 
   const filtered = cat === 'All' ? galleryData : galleryData.filter(i => i.category === cat)
   const cats     = ALL_CATS.filter(c => c === 'All' || galleryData.some(i => i.category === c))
 
-  const openAt = (i) => { setIdx(i); setActive(filtered[i]) }
-  const prev   = () => { const i = (idx - 1 + filtered.length) % filtered.length; openAt(i) }
-  const next   = () => { const i = (idx + 1) % filtered.length; openAt(i) }
+  const open = (i) => openLightbox(filtered, i)
 
   return (
     <>
@@ -103,9 +33,9 @@ export default function Gallery() {
                 <button
                   key={c}
                   onClick={() => setCat(c)}
-                  className={`font-heading font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 ${
+                  className={`font-body font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 ${
                     cat === c
-                      ? 'bg-brand-gradient text-white shadow-accent'
+                      ? 'bg-primary text-white shadow-accent'
                       : 'bg-white text-muted border border-slate-200 hover:border-primary hover:text-primary'
                   }`}
                 >
@@ -126,8 +56,8 @@ export default function Gallery() {
               {filtered.map((item, i) => (
                 <button
                   key={i}
-                  onClick={() => openAt(i)}
-                  className="relative group rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 aspect-square bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary"
+                  onClick={() => open(i)}
+                  className="relative group rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 aspect-square bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   {item.type === 'video' ? (
                     <>
@@ -149,12 +79,12 @@ export default function Gallery() {
                   )}
 
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2 p-3">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="absolute inset-0 bg-primary/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2 p-3">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/>
                     </svg>
                     {item.title && (
-                      <span className="text-white font-heading font-semibold text-xs text-center leading-tight">{item.title}</span>
+                      <span className="text-white font-body font-semibold text-xs text-center leading-tight">{item.title}</span>
                     )}
                   </div>
                 </button>
@@ -170,10 +100,6 @@ export default function Gallery() {
           )}
         </div>
       </section>
-
-      {active && (
-        <Lightbox item={active} onClose={() => setActive(null)} onPrev={prev} onNext={next} />
-      )}
     </>
   )
 }

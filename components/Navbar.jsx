@@ -9,7 +9,7 @@ const links = [
   { href: '/courses',  label: 'Courses' },
   { href: '/faculty',  label: 'Faculty' },
   { href: '/gallery',  label: 'Gallery' },
-  { href: '/movie',    label: 'Movie' },
+  { href: '/rankers',  label: 'Rankers' },
   { href: '/branches', label: 'Branches' },
   { href: '/about',    label: 'About' },
   { href: '/contact',  label: 'Contact' },

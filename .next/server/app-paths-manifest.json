@@ -1,12 +1,9 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/about/page": "app/about/page.js",
-  "/branches/page": "app/branches/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/courses/page": "app/courses/page.js",
-  "/faculty/page": "app/faculty/page.js",
-  "/gallery/page": "app/gallery/page.js",
-  "/movie/page": "app/movie/page.js",
   "/page": "app/page.js",
-  "/rankers/page": "app/rankers/page.js"
+  "/rankers/page": "app/rankers/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/faculty/page": "app/faculty/page.js",
+  "/about/page": "app/about/page.js",
+  "/not-found": "app/not-found.js",
+  "/contact/page": "app/contact/page.js"
 }

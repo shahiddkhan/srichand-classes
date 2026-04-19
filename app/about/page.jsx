@@ -12,7 +12,7 @@ const JOURNEY = [
   { year: '1958', title: 'Foundation',          desc: 'Srichand Classes established in Sion, Mumbai, with a vision to provide high-quality, affordable coaching to every Mumbai student.' },
   { year: '1970s', title: 'Commerce Expansion', desc: 'Added Junior College Commerce coaching as demand grew, helping HSC students excel in Accountancy, Economics and OCM.' },
   { year: '1990s', title: 'Degree & Science',   desc: 'Expanded into Science coaching and professional degree programmes, serving Mumbai University students across Commerce streams.' },
-  { year: '2000s', title: '10,000 Students',    desc: 'A landmark decade — Srichand Classes crossed 10,000 students mentored, with alumni in top careers across India and abroad.' },
+  { year: '2000s', title: '50,000 Students',    desc: 'A landmark decade — Srichand Classes crossed 50,000 students mentored, with alumni in top careers across India and abroad.' },
   { year: '2015+', title: 'Professional Exams', desc: 'Introduced coaching for CA Foundation, ACCA, JEE, NEET and MHTCET as professional exam preparation demand rose across Mumbai.' },
   { year: 'Today', title: '68 Years Strong',    desc: '4 branches, 6 dedicated faculty, and thousands of successful alumni — Srichand Classes continues to shape the academic futures of Mumbai\'s students.' },
 ]
@@ -26,43 +26,63 @@ export default function About() {
         subtitle="68 years of shaping academic futures — built on trust, excellence and a genuine love for teaching."
       />
 
-      {/* Legacy intro */}
+      {/* Founder section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            <div>
+
+            {/* Text — left on desktop, second on mobile */}
+            <div className="order-2 lg:order-1">
               <span className="section-tag">Est. 1958</span>
-              <h2 className="section-title mb-6">68+ Years of Academic Legacy in Mumbai</h2>
+              <h2 className="section-title mb-2">Srichand Lekhraj Thariani</h2>
+              <p className="font-heading font-semibold text-primary text-base mb-6 leading-snug">
+                A Legacy of Learning, Discipline, and Impact
+              </p>
+
               <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
-                Srichand Classes was founded in 1958 in Sion, Mumbai, with a clear belief: every student deserves personalised, high-quality coaching that prepares them for life — not just examinations.
+                Born and raised in Delhi, Shri Srichand Lekhraj Thariani carried an unshakeable belief that education was the greatest gift one could give. After relocating to Mumbai, he brought that conviction with him — and turned it into a movement.
               </p>
               <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
-                Over six decades, we have grown from a single coaching centre into a trusted institution with 4 branches across Mumbai — Sion, Kurla, Matunga and Chembur — serving students from Class VIII through professional qualifications.
+                He began his teaching career at New Era School and later served with distinction as Principal of Sindh Model High School, where his rigorous methods and deep care for students earned him lasting respect across the community.
               </p>
-              <p className="font-body text-slate-600 text-base leading-relaxed mb-8">
-                Three generations of Mumbai families have trusted Srichand Classes. Many of our current students are the children of our earliest batches — a testament to the enduring quality of our teaching and the relationships we build.
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-6">
+                In 1958, from a small room in Sion, he started Srichand Classes — teaching a handful of students from the neighbourhood. Word spread quickly. Parents trusted him. Students thrived. What began at home grew steadily into one of Mumbai's most respected coaching institutions, now spanning 4 branches and having shaped the futures of over 50,000 students across generations.
               </p>
+
+              {/* Pull quote */}
+              <blockquote className="border-l-4 border-primary pl-5 py-1 mb-7">
+                <p className="font-heading font-semibold text-dark text-lg leading-snug italic">
+                  "He did not just teach subjects — he shaped lives."
+                </p>
+              </blockquote>
+
               <Link href="/contact" className="btn-primary">Get in Touch →</Link>
             </div>
 
-            {/* Founder image — coming soon */}
-            <div className="space-y-4">
+            {/* Founder image — first on mobile, right on desktop */}
+            <div className="order-1 lg:order-2">
               <div
-                className="h-72 rounded-2xl flex flex-col items-center justify-center gap-3 text-slate-400"
-                style={{ background: '#f8fafc', border: '2px dashed #cbd5e1' }}
+                className="rounded-2xl overflow-hidden shadow-xl"
+                style={{ aspectRatio: '4/5' }}
               >
-                <span style={{ fontSize: '3rem' }}>👤</span>
-                <span className="font-heading font-semibold text-slate-400 text-sm text-center px-4">
-                  Founder Image Coming Soon
-                </span>
+                <img
+                  src="/images/grandfather/IMG_6306.PNG"
+                  alt="Srichand Lekhraj Thariani — Founder, Srichand Classes"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    display: 'block',
+                  }}
+                />
               </div>
-              <div className="card p-6">
-                <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Our Founder</div>
-                <p className="font-body text-slate-400 text-sm leading-relaxed italic">
-                  The founder's story and photo will be added here soon.
-                </p>
+              <div className="mt-4 text-center">
+                <p className="font-heading font-semibold text-dark text-sm">Srichand Lekhraj Thariani</p>
+                <p className="font-body text-muted text-xs mt-0.5">Founder · Srichand Classes · Est. 1958</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -98,7 +118,7 @@ export default function About() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { val: '68+',     label: 'Years of Teaching' },
-              { val: '10,000+', label: 'Students Mentored' },
+              { val: '50,000+', label: 'Students Mentored' },
               { val: '4',       label: 'Mumbai Branches' },
               { val: '6',       label: 'Expert Faculty' },
             ].map(s => (
@@ -144,7 +164,7 @@ export default function About() {
         <p className="font-body text-slate-400 text-lg mb-8">Join thousands of students who have achieved their best with Srichand Classes.</p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Link href="/contact" className="btn-white text-primary">Enquire Now</Link>
-          <Link href="/courses" className="border-2 border-white/40 text-white hover:bg-white hover:text-dark font-heading font-semibold px-7 py-3 rounded-xl transition-all inline-block">View Courses</Link>
+          <Link href="/courses" className="btn border-2 border-white/40 text-white hover:bg-white hover:text-dark">View Courses</Link>
         </div>
       </section>
     </>

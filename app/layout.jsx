@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FloatingContact from "../components/FloatingContact";
+import { LightboxProvider } from "../components/LightboxProvider";
 
 export const metadata = {
   title: "Srichand Classes – Mumbai's Trusted Coaching Institute Since 1958",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -25,10 +27,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingContact />
+        <LightboxProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <FloatingContact />
+        </LightboxProvider>
       </body>
     </html>
   );

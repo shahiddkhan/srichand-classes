@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link'
 import PageBanner from '../../components/PageBanner'
+import { useLightbox } from '../../components/LightboxProvider'
 
 const SCHOOL_RESULTS = [
   { label: 'OLGC 2025',     src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
@@ -35,7 +37,12 @@ const INDIVIDUAL_RESULTS = [
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.15 PM (1).jpeg',
 ]
 
+const SCHOOL_LIGHTBOX  = SCHOOL_RESULTS.map(r  => ({ src: r.src,  title: r.label }))
+const INDIV_LIGHTBOX   = INDIVIDUAL_RESULTS.map((src, i) => ({ src, title: `Student Achievement ${i + 1}` }))
+
 export default function Rankers() {
+  const { openLightbox } = useLightbox()
+
   return (
     <>
       <PageBanner
@@ -49,7 +56,7 @@ export default function Rankers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto text-center">
             {[
-              { value: '10,000+', label: 'Students Mentored' },
+              { value: '50,000+', label: 'Students Mentored' },
               { value: '68+',     label: 'Years of Results'  },
               { value: '4.6 ★',   label: 'Google Rating'    },
             ].map(s => (
@@ -74,20 +81,32 @@ export default function Rankers() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {SCHOOL_RESULTS.map(r => (
-              <div key={r.label} className="card overflow-hidden group">
+            {SCHOOL_RESULTS.map((r, i) => (
+              <button
+                key={r.label}
+                onClick={() => openLightbox(SCHOOL_LIGHTBOX, i)}
+                className="card overflow-hidden group cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-primary text-left"
+              >
                 <div className="relative" style={{ aspectRatio: '4/3' }}>
                   <img
                     src={r.src}
                     alt={r.label}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     className="group-hover:scale-105 transition-transform duration-500"
+                    onError={e => { e.target.style.opacity = '0.3' }}
                   />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity w-9 h-9 rounded-full bg-white/90 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m3-3v3m-3 0h3" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
                 <div className="p-3 text-center">
-                  <span className="font-heading font-bold text-dark text-sm">{r.label}</span>
+                  <span className="font-body font-semibold text-dark text-sm">{r.label}</span>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -106,9 +125,10 @@ export default function Rankers() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {INDIVIDUAL_RESULTS.map((src, i) => (
-              <div
+              <button
                 key={i}
-                className="card overflow-hidden group cursor-pointer"
+                onClick={() => openLightbox(INDIV_LIGHTBOX, i)}
+                className="card overflow-hidden group cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-primary relative"
                 style={{ aspectRatio: '3/4' }}
               >
                 <img
@@ -116,8 +136,16 @@ export default function Rankers() {
                   alt={`Student achievement ${i + 1}`}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                   className="group-hover:scale-105 transition-transform duration-500"
+                  onError={e => { e.target.style.opacity = '0.3' }}
                 />
-              </div>
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity w-9 h-9 rounded-full bg-white/90 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m3-3v3m-3 0h3" />
+                    </svg>
+                  </div>
+                </div>
+              </button>
             ))}
           </div>
         </div>

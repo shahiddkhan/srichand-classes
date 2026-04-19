@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 ['/', 'Home'], ['/courses', 'Courses'], ['/faculty', 'Faculty'],
-                ['/gallery', 'Gallery'], ['/movie', 'Movie'],
+                ['/gallery', 'Gallery'], ['/rankers', 'Rankers'], ['/movie', 'Movie'],
                 ['/branches', 'Branches'], ['/about', 'About'], ['/contact', 'Contact'],
               ].map(([href, label]) => (
                 <li key={href}>
