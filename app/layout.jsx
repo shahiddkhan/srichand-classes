@@ -8,6 +8,11 @@ export const metadata = {
   title: "Srichand Classes – Mumbai's Trusted Coaching Institute Since 1958",
   description:
     "Expert coaching for School, Junior College and Degree students across Mumbai.",
+  icons: {
+    icon: "/images/logo/logo.png",
+    shortcut: "/images/logo/logo.png",
+    apple: "/images/logo/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -15,7 +20,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/logo/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
