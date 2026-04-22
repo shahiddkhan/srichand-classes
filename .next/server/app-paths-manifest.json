@@ -1,4 +1,8 @@
 {
-  "/page": "app/page.js",
-  "/faculty/page": "app/faculty/page.js"
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/courses/page": "app/courses/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/rankers/page": "app/rankers/page.js",
+  "/branches/page": "app/branches/page.js"
 }

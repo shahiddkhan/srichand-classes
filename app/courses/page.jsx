@@ -18,9 +18,9 @@ const COMMERCE = {
   id: 'commerce',
   icon: '📊',
   title: 'Junior College Commerce',
-  subtitle: 'XI & XII Commerce (HSC)',
-  desc: 'Specialised Commerce coaching for HSC students. Our faculty bring deep subject expertise and exam strategy to ensure students excel in board exams and lay a strong foundation for Commerce degrees.',
-  boards: ['Maharashtra State Board (HSC)'],
+  subtitle: 'XI & XII Commerce',
+  desc: 'Specialised Commerce coaching for XI & XII students. Our faculty bring deep subject expertise and exam strategy to ensure students excel in board exams and lay a strong foundation for Commerce degrees.',
+  boards: ['Maharashtra State Board'],
   subjects: ['Accounts', 'Economics', 'OCM (Organisation of Commerce)', 'Mathematics'],
   highlights: ['Expert Commerce faculty', 'Chapter-wise notes', 'Mock board papers', 'Answer writing workshops'],
   color: 'from-indigo-500 to-blue-600',
@@ -30,9 +30,9 @@ const SCIENCE = {
   id: 'science',
   icon: '🔬',
   title: 'Junior College Science',
-  subtitle: 'XI & XII Science (HSC)',
-  desc: 'Science coaching for XI and XII students targeting HSC board exams and competitive entrance tests. We build rigorous theoretical understanding alongside problem-solving skills.',
-  boards: ['Maharashtra State Board (HSC)'],
+  subtitle: 'XI & XII Science',
+  desc: 'Science coaching for XI and XII students targeting board exams and competitive entrance tests. We build rigorous theoretical understanding alongside problem-solving skills.',
+  boards: ['Maharashtra State Board'],
   subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
   highlights: ['Conceptual depth', 'Numerical problem practice', 'Board + entrance exam focus', 'Regular tests'],
   color: 'from-cyan-500 to-blue-500',
@@ -60,7 +60,7 @@ const PROFESSIONAL = {
 // ─── COURSE CARD ──────────────────────────────────────────────────────────────
 function CourseCard({ data }) {
   return (
-    <div id={data.id} className="scroll-mt-24 card overflow-hidden mb-10">
+    <div id={data.id} className="scroll-mt-40 card overflow-hidden mb-10">
       {/* Header */}
       <div className={`bg-gradient-to-r ${data.color} px-8 py-7 flex items-center gap-5`}>
         <span className="text-5xl">{data.icon}</span>
@@ -148,8 +148,8 @@ export default function Courses() {
           <div className="flex flex-wrap gap-3 justify-center">
             {[
               { href: '#school',       label: '🏫 School (VIII–X)' },
-              { href: '#commerce',     label: '📊 Jr. Commerce' },
-              { href: '#science',      label: '🔬 Jr. Science' },
+              { href: '#commerce',     label: '📊 Commerce' },
+              { href: '#science',      label: '🔬 Science' },
               { href: '#professional', label: '📈 Professional' },
             ].map(l => (
               <a

@@ -6,49 +6,45 @@ const BRANCHES = [
     id: 'sion',
     name: 'Sion',
     tag: 'Main Branch',
-    tagClass: 'bg-primary text-white',
     icon: '🏢',
     since: 'Est. 1958 — Our Original Branch',
-    address: '5A-1/2, Road Number 24,\nSindhi Colony,\nOpp. Gurukripa Hotel,\nSion, Mumbai 400022',
+    address: '5A/1, Sion Sindhi Colony,\nOpp. Gurukrupa Hotel,\nSion (W), Mumbai 400022',
     phone: '9820146010',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9!2d72.8638!3d19.0396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSion%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890',
     color: 'from-blue-600 to-primary',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=5A%2F1+Sion+Sindhi+Colony+Opp+Gurukrupa+Hotel+Sion+West+Mumbai+400022',
   },
   {
     id: 'kurla',
     name: 'Kurla',
     tag: 'Branch',
-    tagClass: 'bg-slate-600 text-white',
     icon: '🏫',
     since: 'Established Branch',
-    address: 'Kurla Branch,\nMumbai',
+    address: 'Shop No. 2, Sangam Apartments,\nLBS Road, near Bank of Maharashtra,\nKurla, Mumbai 400070',
     phone: '9920352980',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9!2d72.8938!3d19.0696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKurla%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890',
     color: 'from-indigo-500 to-blue-600',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sangam+Apartments+LBS+Road+near+Bank+of+Maharashtra+Kurla+Mumbai+400070',
   },
   {
     id: 'matunga',
     name: 'Matunga',
     tag: 'Branch',
-    tagClass: 'bg-slate-600 text-white',
     icon: '🏫',
     since: 'Established Branch',
-    address: 'Matunga Branch,\nNear King\'s Circle,\nMumbai 400019',
+    address: '547, Ishan Tower,\nA. R. Jame Jamshed Road, near Five Gardens,\nMatunga, Mumbai 400019',
     phone: '9820352980',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9!2d72.8438!3d19.0196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMatunga%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890',
     color: 'from-cyan-500 to-primary',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=547+Ishan+Tower+AR+Jame+Jamshed+Road+near+Five+Gardens+Matunga+Mumbai+400019',
   },
   {
     id: 'chembur',
     name: 'Chembur',
     tag: 'Branch',
-    tagClass: 'bg-slate-600 text-white',
     icon: '🏫',
     since: 'Established Branch',
-    address: 'Chembur Branch,\nNear Diamond Garden,\nMumbai',
+    address: '1B/7, Tolaram Nagar CHS,\nnear Shri Guru Singh Sabha,\nChembur Camp, Mumbai 400074',
     phone: '9820352975',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9!2d72.8938!3d19.0296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sChembur%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890',
     color: 'from-purple-500 to-indigo-600',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Tolaram+Nagar+CHS+near+Shri+Guru+Singh+Sabha+Chembur+Camp+Mumbai+400074',
   },
 ]
 
@@ -58,7 +54,7 @@ function BranchCard({ b }) {
       {/* Header */}
       <div className={`bg-gradient-to-r ${b.color} px-7 py-6 flex items-start justify-between`}>
         <div>
-          <span className={`text-xs font-heading font-semibold px-3 py-1 rounded-full bg-white/20 text-white inline-block mb-3`}>
+          <span className="text-xs font-heading font-semibold px-3 py-1 rounded-full bg-white/20 text-white inline-block mb-3">
             {b.tag}
           </span>
           <h2 className="font-heading font-black text-white text-2xl">{b.name}</h2>
@@ -68,54 +64,56 @@ function BranchCard({ b }) {
       </div>
 
       {/* Body */}
-      <div className="grid md:grid-cols-2">
-        {/* Address & actions */}
-        <div className="p-7 border-r border-slate-100">
-          <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-3">Address</div>
-          <p className="font-body text-slate-700 leading-relaxed whitespace-pre-line mb-6">{b.address}</p>
+      <div className="p-7">
+        <div className="grid sm:grid-cols-2 gap-8">
+          {/* Left: address + phone + hours */}
+          <div>
+            <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-3">Address</div>
+            <p className="font-body text-slate-700 leading-relaxed whitespace-pre-line mb-6">{b.address}</p>
 
-          <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-3">Phone</div>
-          <a href={`tel:+91${b.phone}`} className="font-heading font-bold text-dark hover:text-primary text-xl transition-colors block mb-7" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>
-            +91 {b.phone}
-          </a>
-
-          <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Hours</div>
-          <p className="font-body text-slate-600 text-sm mb-6" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>Mon – Sat: 11:00 AM – 8:00 PM</p>
-
-          <div className="flex gap-3">
+            <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-3">Phone</div>
             <a
               href={`tel:+91${b.phone}`}
-              className="flex-1 flex items-center justify-center gap-2 bg-primary/10 hover:bg-primary text-primary hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-lg transition-all duration-200 hover:scale-[1.02]"
+              className="font-heading font-bold text-dark hover:text-primary text-xl transition-colors block mb-6"
+              style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}
             >
-              📞 Call
+              +91 {b.phone}
+            </a>
+
+            <div className="font-heading font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Hours</div>
+            <p className="font-body text-slate-600 text-sm" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>
+              Mon – Sat: 11:00 AM – 8:00 PM
+            </p>
+          </div>
+
+          {/* Right: action buttons */}
+          <div className="flex flex-col gap-3 justify-center">
+            <a
+              href={`tel:+91${b.phone}`}
+              className="flex items-center justify-center gap-2 bg-primary/10 hover:bg-primary text-primary hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl transition-all duration-200"
+            >
+              📞 Call Branch
             </a>
             <a
               href={`https://wa.me/91${b.phone}?text=Hello%2C%20I%20am%20enquiring%20about%20Srichand%20Classes%20${b.name}%20branch.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 bg-green-50 hover:bg-green-600 text-green-600 hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-lg transition-all duration-200 hover:scale-[1.02]"
+              className="flex items-center justify-center gap-2 bg-green-50 hover:bg-green-600 text-green-600 hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl transition-all duration-200"
             >
               💬 WhatsApp
             </a>
+            <a
+              href={b.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-amber-50 hover:bg-amber-500 text-amber-600 hover:text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl transition-all duration-200"
+            >
+              📍 Get Directions
+            </a>
+            <Link href="/contact" className="btn-primary text-sm text-center px-4 py-3 rounded-xl block">
+              Enquire Now
+            </Link>
           </div>
-          <Link href="/contact" className="btn btn-primary text-sm text-center w-full mt-3 block">
-            Enquire Now
-          </Link>
-        </div>
-
-        {/* Map */}
-        <div className="relative">
-          <iframe
-            src={b.mapEmbed}
-            width="100%"
-            height="100%"
-            style={{ minHeight: '260px', border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={`${b.name} branch map`}
-            className="rounded-br-2xl"
-          />
         </div>
       </div>
     </div>
@@ -146,7 +144,11 @@ export default function Branches() {
               <div key={b.id} className="card p-5 text-center">
                 <div className="text-3xl mb-2">{b.icon}</div>
                 <div className="font-heading font-bold text-dark text-sm mb-1">{b.name}</div>
-                <a href={`tel:+91${b.phone}`} className="font-body text-primary hover:text-secondary text-sm transition-colors" style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}>
+                <a
+                  href={`tel:+91${b.phone}`}
+                  className="font-body text-primary hover:text-secondary text-sm transition-colors"
+                  style={{ fontWeight: 500, letterSpacing: '0.3px', fontVariantNumeric: 'tabular-nums' }}
+                >
                   +91 {b.phone}
                 </a>
               </div>

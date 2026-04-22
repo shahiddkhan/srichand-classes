@@ -4,14 +4,15 @@ import PageBanner from '../../components/PageBanner'
 import { useLightbox } from '../../components/LightboxProvider'
 
 const SCHOOL_RESULTS = [
-  { label: 'OLGC 2025',     src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
-  { label: 'OLGC 2024',     src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg' },
-  { label: 'Guru Nanak',    src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg' },
-  { label: 'D.S.',          src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg' },
-  { label: 'Fatima',        src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
-  { label: 'Class Topper',  src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
-  { label: 'SSC 2025',      src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
-  { label: 'SSC 2024',      src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+  { label: 'SSC 2025',         src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { label: 'OLGC 2025',        src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { label: 'Accounts Toppers', src: '/images/results/account_toppers/WhatsApp Image 2026-04-22 at 9.09.58 AM.jpeg' },
+  { label: 'SIES 2025',        src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+  { label: 'SSC 2024',         src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+  { label: 'D.S.',             src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg' },
+  { label: 'Fatima',           src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { label: 'Guru Nanak',       src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg' },
+  { label: 'OLGC 2024',        src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg' },
 ]
 
 const INDIVIDUAL_RESULTS = [
@@ -19,22 +20,22 @@ const INDIVIDUAL_RESULTS = [
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM (1).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM (2).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.07 PM.jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.07 PM (1).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.07 PM (2).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.08 PM.jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.08 PM (1).jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.09 PM.jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.09 PM (1).jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.10 PM (1).jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.11 PM (1).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.13 PM.jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.13 PM (1).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.14 PM.jpeg',
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.14 PM (1).jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg',
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.15 PM (1).jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM.jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM (1).jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM (2).jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM.jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM (1).jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM (2).jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.44.19 PM.jpeg',
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.54.06 PM.jpeg',
 ]
 
 const SCHOOL_LIGHTBOX  = SCHOOL_RESULTS.map(r  => ({ src: r.src,  title: r.label }))
@@ -91,7 +92,7 @@ export default function Rankers() {
                   <img
                     src={r.src}
                     alt={r.label}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
                     className="group-hover:scale-105 transition-transform duration-500"
                     onError={e => { e.target.style.opacity = '0.3' }}
                   />
@@ -134,7 +135,7 @@ export default function Rankers() {
                 <img
                   src={src}
                   alt={`Student achievement ${i + 1}`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
                   className="group-hover:scale-105 transition-transform duration-500"
                   onError={e => { e.target.style.opacity = '0.3' }}
                 />

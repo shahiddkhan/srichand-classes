@@ -40,19 +40,37 @@ export default function About() {
               </p>
 
               <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
-                Born and raised in Delhi, Shri Srichand Lekhraj Thariani carried an unshakeable belief that education was the greatest gift one could give. After relocating to Mumbai, he brought that conviction with him — and turned it into a movement.
+                Srichand Lekhraj Thariani's journey is not just the story of an educator, but of a man who quietly transformed thousands of lives through the power of teaching.
               </p>
               <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
-                He began his teaching career at New Era School and later served with distinction as Principal of Sindh Model High School, where his rigorous methods and deep care for students earned him lasting respect across the community.
+                Beginning his career in Delhi, he soon moved to Bombay with a vision that extended far beyond the classroom. He started as a teacher at New Era School in Ulhasnagar, where his clarity of thought and deep commitment to his students quickly set him apart. Teaching for him was never just a profession—it was a responsibility he carried with sincerity and pride.
               </p>
-              <p className="font-body text-slate-600 text-base leading-relaxed mb-6">
-                In 1958, from a small room in Sion, he started Srichand Classes — teaching a handful of students from the neighbourhood. Word spread quickly. Parents trusted him. Students thrived. What began at home grew steadily into one of Mumbai's most respected coaching institutions, now spanning 4 branches and having shaped the futures of over 50,000 students across generations.
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                His next chapter unfolded at Sindh Model High School, Grant Road (now known as Master Tutorials), where his influence grew rapidly. Students were drawn not just to his knowledge, but to the way he made them believe in themselves. His natural leadership and ability to inspire earned him the role of Principal—an achievement that reflected both respect and trust from the institution and its students.
+              </p>
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                But his most defining work began humbly—from his own home.
+              </p>
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                What started as a small group of students seeking extra guidance soon became something extraordinary. Word spread, not through marketing, but through genuine impact. Parents spoke, students returned, and before long, hundreds of students would line up on the very first day admissions opened, hoping to learn under him.
+              </p>
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                This organic growth led to the expansion of his teaching into multiple branches across Mumbai, reaching thousands of students every year. Over time, he guided more than 50,000 students—each carrying forward a piece of his teachings, discipline, and belief.
+              </p>
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                Yet, numbers alone do not define his legacy.
+              </p>
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                He was a person whose presence could change the energy of a room. Someone you could never forget, even after a single meeting. His words stayed with you. His expectations pushed you. And his belief in you often came before you believed in yourself.
+              </p>
+              <p className="font-body text-slate-600 text-base leading-relaxed mb-4">
+                Today, his legacy lives on—not just in institutions or achievements, but in people. Even the third generation of his family continues in the same field, carrying forward the principles he lived by: sincerity, discipline, and a deep respect for education.
               </p>
 
               {/* Pull quote */}
               <blockquote className="border-l-4 border-primary pl-5 py-1 mb-7">
                 <p className="font-heading font-semibold text-dark text-lg leading-snug italic">
-                  "He did not just teach subjects — he shaped lives."
+                  Srichand Lekhraj Thariani did not just teach subjects—he shaped lives. And in doing so, he built something far greater than a career: he built a legacy that continues to inspire.
                 </p>
               </blockquote>
 
@@ -143,13 +161,23 @@ export default function About() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-200" />
             <div className="space-y-8">
               {JOURNEY.map((j, i) => (
-                <div key={i} className="flex gap-6 items-start">
-                  <div className="relative z-10 w-16 h-16 flex-shrink-0 bg-brand-gradient rounded-full flex items-center justify-center shadow-md">
+                <div key={i} className="flex gap-6 items-stretch">
+                  <div className="relative z-10 w-16 h-16 flex-shrink-0 bg-brand-gradient rounded-full flex items-center justify-center shadow-md mt-1">
                     <span className="font-heading font-black text-white text-xs text-center leading-tight px-1">{j.year}</span>
                   </div>
-                  <div className="card p-5 flex-1 mt-1">
-                    <div className="font-heading font-bold text-dark text-sm mb-1">{j.title}</div>
-                    <p className="font-body text-muted text-sm leading-relaxed">{j.desc}</p>
+                  <div className="card p-5 flex-1 min-w-0 overflow-hidden flex flex-col justify-start">
+                    <div
+                      className="font-heading font-bold text-dark text-sm mb-2 break-words max-w-full"
+                      style={{ overflowWrap: 'anywhere' }}
+                    >
+                      {j.title}
+                    </div>
+                    <p
+                      className="font-body text-muted text-sm leading-relaxed break-words max-w-full"
+                      style={{ overflowWrap: 'anywhere' }}
+                    >
+                      {j.desc}
+                    </p>
                   </div>
                 </div>
               ))}

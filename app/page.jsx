@@ -2,6 +2,7 @@ import Link from 'next/link'
 import TestimonialsSection from '../components/TestimonialsSection'
 import StatsSection from '../components/StatsSection'
 import ResultsSection from '../components/ResultsSection'
+import AboutStripImage from '../components/AboutStripImage'
 
 // ─── HERO ──────────────────────────────────────────────────────────────────────
 function Hero() {
@@ -78,7 +79,7 @@ function Hero() {
               fontSize: '0.85rem',
               letterSpacing: '0.04em',
             }}>
-              SSC Batch 2025–26
+              Our Students · 2025–26
             </p>
           </div>
         </div>
@@ -89,10 +90,10 @@ function Hero() {
 
 // ─── QUICK COURSES ─────────────────────────────────────────────────────────────
 const QUICK_COURSES = [
-  { icon: '🏫', label: 'School Coaching', sub: 'Class VIII–X', href: '/courses#school',    color: 'bg-blue-50 text-blue-700' },
-  { icon: '📊', label: 'Jr. Commerce',    sub: 'XI–XII HSC',   href: '/courses#commerce',  color: 'bg-indigo-50 text-indigo-700' },
-  { icon: '🔬', label: 'Jr. Science',     sub: 'XI–XII HSC',   href: '/courses#science',   color: 'bg-cyan-50 text-cyan-700' },
-  { icon: '📈', label: 'Professional',    sub: 'CA/ACCA/JEE',  href: '/courses#professional', color: 'bg-purple-50 text-purple-700' },
+  { icon: '🏫', label: 'School',      sub: 'VIII–X',       href: '/courses#school',       color: 'bg-blue-50 text-blue-700' },
+  { icon: '📊', label: 'Commerce',    sub: 'XI–XII',       href: '/courses#commerce',     color: 'bg-indigo-50 text-indigo-700' },
+  { icon: '🔬', label: 'Science',     sub: 'XI–XII',       href: '/courses#science',      color: 'bg-cyan-50 text-cyan-700' },
+  { icon: '📈', label: 'Professional',sub: 'CA / ACCA',    href: '/courses#professional', color: 'bg-purple-50 text-purple-700' },
 ]
 
 function QuickCourses() {
@@ -112,6 +113,7 @@ function QuickCourses() {
             </Link>
           ))}
         </div>
+        <p className="text-center font-body text-muted text-xs mt-4">MHT CET / JEE / NEET</p>
       </div>
     </section>
   )
@@ -135,13 +137,7 @@ function AboutStrip() {
             <Link href="/about" className="btn-primary">Our Story →</Link>
           </div>
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-              <img
-                src="/images/picnic/WhatsApp Image 2026-04-15 at 11.25.39 AM.jpeg"
-                alt="Srichand Classes students"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
-              />
-            </div>
+            <AboutStripImage />
             <div className="absolute -bottom-4 -right-4 bg-brand-gradient text-white rounded-2xl px-6 py-4 shadow-xl">
               <div className="font-heading font-black text-3xl">50,000+</div>
               <div className="font-body text-white/80 text-xs mt-0.5">Students Mentored</div>
