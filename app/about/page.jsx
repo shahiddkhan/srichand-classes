@@ -32,13 +32,13 @@ const JOURNEY = [
   },
   {
     year: "1970s",
-    title: "Commerce Expansion",
-    desc: "Added Junior College Commerce coaching as demand grew, helping HSC students excel in Mathematics, Accountancy, Economics and OCM.",
+    title: "Commerce",
+    desc: "Added Junior College Commerce coaching helping HSC students excel in Mathematics, Accountancy, Economics and OCM.",
   },
   {
     year: "1990s",
-    title: "Degree & Science",
-    desc: "Expanded into Science coaching and professional degree programmes, serving Mumbai University students across Commerce streams.",
+    title: "Science",
+    desc: "Expanded into Science coaching HSC students in Physics,Chemistry,Mathematics and Biology.",
   },
   {
     year: "2000s",
@@ -48,12 +48,12 @@ const JOURNEY = [
   {
     year: "2015+",
     title: "Professional/Enterance Exams",
-    desc: "Introduced coaching for CA Foundation, ACCA, JEE, NEET and MHTCET as professional exam preparation demand rose across Mumbai.",
+    desc: "Introduced coaching for CA Foundation, ACCA, JEE, NEET and MHTCET.",
   },
   {
     year: "Today",
     title: "68 Years Strong",
-    desc: "4 branches, 6 dedicated faculty, and thousands of successful alumni — Srichand Classes continues to shape the academic futures of Mumbai's students.",
+    desc: "4 branches, 30 dedicated faculty, and thousands of successful alumni — Srichand Classes continues to shape the academic futures of Mumbai's students.",
   },
 ];
 
