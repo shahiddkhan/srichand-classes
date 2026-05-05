@@ -113,7 +113,6 @@ function QuickCourses() {
             </Link>
           ))}
         </div>
-        <p className="text-center font-body text-muted text-xs mt-4">MHT CET / JEE / NEET</p>
       </div>
     </section>
   )

@@ -14,7 +14,7 @@ const FACULTY = [
     accentBg: 'from-purple-900/80 to-purple-600/40',
     image: '/images/faculty/sanjeev thariani.jpeg',
     bio: 'Mr. Sanjeev Thariani is one of the most revered educators at Srichand Classes, bringing over 45 years of teaching experience and a truly legendary reputation in the field of education. A long-time student favourite, he is celebrated for his enigmatic personality, commanding classroom presence, and unparalleled ability to teach Geometry with remarkable clarity and impact. His distinctive teaching style has inspired generations of students, making him not just a teacher, but a lasting mentor in their academic journey.',
-    subjects: ['Geometry (School)', 'Mathematics (VIII–X)', 'SSC & ICSE Board'],
+    subjects: ['Geometry (School)', 'Algebra (School)', 'Mathematics (XI–XII)'],
     achievements: [
       '45+ years of teaching experience',
       'Legendary reputation in Geometry education',
@@ -31,7 +31,7 @@ const FACULTY = [
     accentBg: 'from-blue-900/80 to-blue-600/40',
     image: '/images/faculty/vinesh thariani.jpeg',
     bio: 'Mr. Vinesh Thariani is an expert Science educator at Srichand Classes, with a B.Pharm degree and a reputation for his passion, practical approach, and unwavering dedication to student success. Known for going the extra mile for every learner, he combines deep subject knowledge with real-world understanding to make Science both relatable and engaging. By blending humor with academic rigor, he creates a vibrant classroom environment where complex scientific concepts become easy to understand and enjoyable to learn.',
-    subjects: ['Science (VIII–X)', 'Biology & Chemistry', 'SSC & ICSE Board'],
+    subjects: ['Science (VIII–X)', 'Physics/Mathematics (XI–XII)'],
     achievements: [
       'B.Pharm degree — strong subject foundation',
       'Known for going the extra mile for students',
@@ -48,7 +48,7 @@ const FACULTY = [
     accentBg: 'from-green-900/80 to-green-600/40',
     image: '/images/faculty/sandeep thariani.jpeg',
     bio: 'Mr. Sandeep Thariani is the cornerstone of Geometry at Srichand Classes, with over 39 years of teaching excellence. Renowned for his exceptional ability to simplify complex concepts, he transforms geometry into an engaging and enjoyable subject through unmatched clarity, infectious energy, and his signature sense of humour. With every class, he ensures that students not only understand the subject deeply but also develop a genuine appreciation for it.',
-    subjects: ['Geometry (School)', 'Mathematics (VIII–X)', 'SSC & ICSE Board'],
+    subjects: ['Geometry (School)', 'Algebra'],
     achievements: [
       '39+ years of teaching excellence',
       'Renowned for simplifying complex concepts',
@@ -65,7 +65,7 @@ const FACULTY = [
     accentBg: 'from-indigo-900/80 to-indigo-600/40',
     image: '/images/faculty/harsh thariani.jpeg',
     bio: 'Mr. Harsh Thariani is a passionate and highly experienced educator at Srichand Classes, with over 17 years of teaching experience in Mathematics and Accounts. Widely admired for his exceptional mathematical aptitude and deep subject mastery. Through his patient, structured, and concept-driven approach, he helps students build not only strong academic foundations but also the confidence to excel beyond the classroom. Before dedicating himself full-time to education, he gained valuable corporate experience as an Auditor at KPMG and as an Equity Research Analyst at TresVista.',
-    subjects: ['Mathematics (School & XI–XII)', 'Accounts (XI–XII)', 'CA Foundation'],
+    subjects: ['Mathematics (School & XI–XII)', 'Accounts (XI–XII)', 'CA Foundation', 'ACCA'],
     achievements: [
       '17+ years of teaching experience',
       'Former Auditor at KPMG',
@@ -82,7 +82,7 @@ const FACULTY = [
     accentBg: 'from-cyan-900/80 to-cyan-600/40',
     image: '/images/faculty/kunal thariani.jpeg',
     bio: 'Mr. Kunal Thariani is a dedicated educator at Srichand Classes, with over 12 years of teaching experience and a reputation for his exceptional rapport and compassion toward students. Known for building genuine connections with every learner, he takes pride in knowing each student personally and creating a classroom environment rooted in trust, comfort, and encouragement. Widely admired as a young and relatable mentor, he is deeply respected by students for his approachable nature, unwavering support, and commitment to their overall growth.',
-    subjects: ['Science (VIII–X)', 'Mathematics (School)', 'SSC & ICSE Board'],
+    subjects: ['Mathematics (School)'],
     achievements: [
       '12+ years of teaching experience',
       'Exceptional rapport and compassion with students',
@@ -99,7 +99,7 @@ const FACULTY = [
     accentBg: 'from-pink-900/80 to-pink-600/40',
     image: '/images/faculty/vidhi dalal.jpeg',
     bio: 'Mrs. Vidhi Dalal is a highly respected educator at Srichand Classes, with over 8 years of teaching experience and a reputation for excellence in English education. Known for her strong command of grammar and structured teaching methodology, she brings both clarity and warmth to the classroom. Her ability to simplify difficult concepts while strengthening students\' overall command of the English language helps them build confidence, communicate effectively, and consistently achieve excellent results.',
-    subjects: ['English (VIII–X)', 'Grammar & Writing', 'SSC, ICSE & CBSE Board'],
+    subjects: ['English (VIII–X)', 'Grammar & Writing', 'OC (XI–XII)'],
     achievements: [
       '8+ years of English teaching experience',
       'Strong command of grammar and language',

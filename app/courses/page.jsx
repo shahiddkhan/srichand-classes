@@ -7,8 +7,8 @@ const SCHOOL = {
   icon: '🏫',
   title: 'School Coaching',
   subtitle: 'Class VIII · IX · X',
-  desc: 'Comprehensive coaching across all major boards with small batches, weekly tests and personalised attention. Our school programme builds strong conceptual foundations that support students through board exams and beyond.',
-  boards: ['SSC', 'ICSE', 'CBSE'],
+  desc: 'Comprehensive coaching with small batches, weekly tests and personalised attention. Our school programme builds strong conceptual foundations that support students through board exams and beyond.',
+  boards: [],
   subjects: ['Mathematics', 'Science', 'English', 'Geography', 'Social Studies', 'Hindi', 'Marathi'],
   highlights: ['Small batch sizes', 'Board-pattern weekly tests', 'Writing practice sessions', 'PTM every term'],
   color: 'from-blue-500 to-primary',
@@ -20,8 +20,8 @@ const COMMERCE = {
   title: 'Junior College Commerce',
   subtitle: 'XI & XII Commerce',
   desc: 'Specialised Commerce coaching for XI & XII students. Our faculty bring deep subject expertise and exam strategy to ensure students excel in board exams and lay a strong foundation for Commerce degrees.',
-  boards: ['Maharashtra State Board'],
-  subjects: ['Accounts', 'Economics', 'OCM (Organisation of Commerce)', 'Mathematics'],
+  boards: [],
+  subjects: ['Accounts (XI-XII)', 'Economics (XI-XII)', 'OC (XI-XII)', 'Mathematics (XI-XII)'],
   highlights: ['Expert Commerce faculty', 'Chapter-wise notes', 'Mock board papers', 'Answer writing workshops'],
   color: 'from-indigo-500 to-blue-600',
 }
@@ -32,8 +32,9 @@ const SCIENCE = {
   title: 'Junior College Science',
   subtitle: 'XI & XII Science',
   desc: 'Science coaching for XI and XII students targeting board exams and competitive entrance tests. We build rigorous theoretical understanding alongside problem-solving skills.',
-  boards: ['Maharashtra State Board'],
-  subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
+  boards: [],
+  subjects: ['Physics (XI-XII)', 'Chemistry (XI-XII)', 'Mathematics (XI-XII)', 'Biology (XI-XII)'],
+  entranceExams: ['MHT CET', 'JEE', 'NEET'],
   highlights: ['Conceptual depth', 'Numerical problem practice', 'Board + entrance exam focus', 'Regular tests'],
   color: 'from-cyan-500 to-blue-500',
 }
@@ -49,9 +50,6 @@ const PROFESSIONAL = {
   programmes: [
     { name: 'ACCA',         desc: 'Association of Chartered Certified Accountants — international finance qualification.' },
     { name: 'CA Foundation',desc: 'ICAI CA Foundation coaching with structured syllabus coverage and mock tests.' },
-    { name: 'MHTCET',       desc: 'Maharashtra Common Entrance Test preparation for engineering and pharmacy.' },
-    { name: 'JEE',          desc: 'Joint Entrance Examination coaching for IIT and NIT aspirants.' },
-    { name: 'NEET',         desc: 'National Eligibility cum Entrance Test preparation for medical aspirants.' },
   ],
   highlights: ['Small expert batches', 'Exam-pattern focused', 'Mock tests & analysis', 'Mentoring sessions'],
   color: 'from-purple-500 to-indigo-600',
@@ -93,6 +91,18 @@ function CourseCard({ data }) {
               <div className="flex flex-wrap gap-2">
                 {data.subjects.map(s => (
                   <span key={s} className="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">{s}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Entrance Exams */}
+          {data.entranceExams && data.entranceExams.length > 0 && (
+            <div>
+              <div className="font-heading font-semibold text-slate-700 text-xs uppercase tracking-wider mb-3">Entrance Exams</div>
+              <div className="flex flex-wrap gap-2">
+                {data.entranceExams.map(e => (
+                  <span key={e} className="bg-cyan-50 text-cyan-700 border border-cyan-200 text-xs font-medium px-3 py-1 rounded-full">{e}</span>
                 ))}
               </div>
             </div>
