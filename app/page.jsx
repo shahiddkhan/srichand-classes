@@ -90,10 +90,10 @@ function Hero() {
 
 // ─── QUICK COURSES ─────────────────────────────────────────────────────────────
 const QUICK_COURSES = [
-  { icon: '🏫', label: 'School',      sub: 'VIII–X',       href: '/courses#school',       color: 'bg-blue-50 text-blue-700' },
-  { icon: '📊', label: 'Commerce',    sub: 'XI–XII',       href: '/courses#commerce',     color: 'bg-indigo-50 text-indigo-700' },
-  { icon: '🔬', label: 'Science',     sub: 'XI–XII',       href: '/courses#science',      color: 'bg-cyan-50 text-cyan-700' },
-  { icon: '📈', label: 'Professional',sub: 'CA / ACCA',    href: '/courses#professional', color: 'bg-purple-50 text-purple-700' },
+  { icon: '🏫', label: 'School',      sub: 'VIII–X',    href: '/courses#school',       color: 'bg-blue-50 text-blue-700' },
+  { icon: '📊', label: 'Commerce',    sub: 'XI–XII',    href: '/courses#commerce',     color: 'bg-indigo-50 text-indigo-700' },
+  { icon: '🔬', label: 'Science',     sub: 'XI–XII',    href: '/courses#science',      color: 'bg-cyan-50 text-cyan-700', mid: 'MHT CET / JEE / NEET' },
+  { icon: '📈', label: 'Professional',sub: 'CA / ACCA', href: '/courses#professional', color: 'bg-purple-50 text-purple-700' },
 ]
 
 function QuickCourses() {
@@ -109,6 +109,7 @@ function QuickCourses() {
             >
               <span className="text-4xl">{c.icon}</span>
               <span className={`text-xs font-heading font-semibold px-3 py-1 rounded-full ${c.color}`}>{c.sub}</span>
+              {c.mid && <span className="font-heading font-semibold text-primary text-xs">{c.mid}</span>}
               <span className="font-heading font-semibold text-dark text-sm group-hover:text-primary transition-colors">{c.label}</span>
             </Link>
           ))}

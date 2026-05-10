@@ -48,7 +48,7 @@ const FACULTY = [
     accentBg: 'from-green-900/80 to-green-600/40',
     image: '/images/faculty/sandeep thariani.jpeg',
     bio: 'Mr. Sandeep Thariani is the cornerstone of Geometry at Srichand Classes, with over 39 years of teaching excellence. Renowned for his exceptional ability to simplify complex concepts, he transforms geometry into an engaging and enjoyable subject through unmatched clarity, infectious energy, and his signature sense of humour. With every class, he ensures that students not only understand the subject deeply but also develop a genuine appreciation for it.',
-    subjects: ['Geometry (School)', 'Algebra'],
+    subjects: ['Geometry (School)', 'Algebra (School)'],
     achievements: [
       '39+ years of teaching excellence',
       'Renowned for simplifying complex concepts',
@@ -82,7 +82,7 @@ const FACULTY = [
     accentBg: 'from-cyan-900/80 to-cyan-600/40',
     image: '/images/faculty/kunal thariani.jpeg',
     bio: 'Mr. Kunal Thariani is a dedicated educator at Srichand Classes, with over 12 years of teaching experience and a reputation for his exceptional rapport and compassion toward students. Known for building genuine connections with every learner, he takes pride in knowing each student personally and creating a classroom environment rooted in trust, comfort, and encouragement. Widely admired as a young and relatable mentor, he is deeply respected by students for his approachable nature, unwavering support, and commitment to their overall growth.',
-    subjects: ['Mathematics (School)'],
+    subjects: ['Geometry (School)', 'Algebra (School)'],
     achievements: [
       '12+ years of teaching experience',
       'Exceptional rapport and compassion with students',

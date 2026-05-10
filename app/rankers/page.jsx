@@ -21,24 +21,25 @@ const SCHOOL_RESULTS = [
 ]
 
 const INDIVIDUAL_RESULTS = [
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM (1).jpeg',  // Divya Suthar   95.8%
+  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM (1).jpeg',  // Divya          95.8%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM (2).jpeg',  // Latika         95.4%
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM.jpeg',      // Arjun Suthar   94.8%
+  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM.jpeg',      // Arjun          94.8%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM (1).jpeg',  // Ziya           94.4%
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.07 PM.jpeg',      // Dev            94.2%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM (1).jpeg',  // Sanika         94.2%
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.13 PM.jpeg',      // Naquiyal       92.0%
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg',      // Kasish         92.0%
-  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM.jpeg',      // Muskaa         91.6%
+  '/images/results/individual image/WhatsApp Image 2026-05-09 at 3.13.48 AM (5).jpeg',  // Paras          93.8%
+  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.13 PM.jpeg',      // Naquiyah       92.0%
+  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg',      // Kashish        92.0%
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM.jpeg',      // Muskaan        91.6%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM.jpeg',      // Saima          91.6%
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.07 PM (2).jpeg',  // Tyshawn        91.2%
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.08 PM.jpeg',      // Paras          91.2%
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM (2).jpeg',  // Akansh         90.8%
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.10 PM (1).jpeg',  // Krishna        90.4%
-  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.13 PM (1).jpeg',  // Yashi          90.0%
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.14 PM.jpeg',      // Izaan          90.2%
-  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.44.19 PM.jpeg',      // Zainab         89.6%
+  '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.13 PM (1).jpeg',  // Yashi          90.0%
+  '/images/results/individual image/WhatsApp Image 2026-05-09 at 3.13.48 AM (6).jpeg',  // Subhiksha      90.0%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.54.06 PM.jpeg',      // Pratiksha      89.8%
+  '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.44.19 PM.jpeg',      // Zaina          89.6%
+  '/images/results/individual image/WhatsApp Image 2026-05-09 at 3.13.48 AM (3).jpeg',  // Tyshawn        89.4%
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.15 PM (1).jpeg',  // Ishita         89.2%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.25 PM (2).jpeg',  // Zeesh          89.2%
 ]

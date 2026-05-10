@@ -4,12 +4,12 @@ import { useLightbox } from './LightboxProvider'
 
 const RESULT_IMGS = [
   { src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg',                          title: 'SSC 2025' },
-  { src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg',                         title: 'OLGC 2025' },
-  { src: '/images/results/account_toppers/WhatsApp Image 2026-04-22 at 9.09.58 AM.jpeg',                   title: 'Accounts Toppers' },
-  { src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg',              title: 'SIES 2025' },
   { src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg',                          title: 'SSC 2024' },
-  { src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg',                                title: 'D.S.' },
+  { src: '/images/results/account_toppers/WhatsApp Image 2026-04-22 at 9.09.58 AM.jpeg',                   title: 'Accounts Toppers' },
+  { src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg',                         title: 'OLGC 2025' },
+  { src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg',              title: 'SIES 2025' },
   { src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg',                            title: 'Fatima' },
+  { src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg',                                title: 'D.S.' },
   { src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg',                         title: 'Guru Nanak' },
   { src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg',                         title: 'OLGC 2024' },
 ]

@@ -9,7 +9,7 @@ const SCHOOL = {
   subtitle: 'Class VIII · IX · X',
   desc: 'Comprehensive coaching with small batches, weekly tests and personalised attention. Our school programme builds strong conceptual foundations that support students through board exams and beyond.',
   boards: [],
-  subjects: ['Mathematics', 'Science', 'English', 'Geography', 'Social Studies', 'Hindi', 'Marathi'],
+  subjects: ['Mathematics', 'Science', 'English', 'Social Studies', 'Hindi', 'Marathi'],
   highlights: ['Small batch sizes', 'Board-pattern weekly tests', 'Writing practice sessions', 'PTM every term'],
   color: 'from-blue-500 to-primary',
 }
