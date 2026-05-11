@@ -88,14 +88,14 @@ const galleryData = [
   { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.52 PM.jpeg' },
 
   // ── RESULTS ─────────────────────────────────────────────────────────────────
-  { type: 'image', title: 'OLGC 2025', category: 'Results', src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
-  { type: 'image', title: 'OLGC 2024', category: 'Results', src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg' },
-  { type: 'image', title: 'Guru Nanak', category: 'Results', src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg' },
-  { type: 'image', title: 'D.S.', category: 'Results', src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg' },
-  { type: 'image', title: 'Fatima', category: 'Results', src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
-  { type: 'image', title: 'Class Topper', category: 'Results', src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
   { type: 'image', title: 'SSC 2025', category: 'Results', src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
   { type: 'image', title: 'SSC 2024', category: 'Results', src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+  { type: 'image', title: 'Class Topper', category: 'Results', src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
+  { type: 'image', title: 'OLGC 2025', category: 'Results', src: '/images/results/olgc/2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { type: 'image', title: 'Guru Nanak', category: 'Results', src: '/images/results/gurunanak/WhatsApp Image 2026-04-17 at 2.33.10 PM.jpeg' },
+  { type: 'image', title: 'OLGC 2024', category: 'Results', src: '/images/results/olgc/2024/WhatsApp Image 2026-04-17 at 2.33.11 PM.jpeg' },
+  { type: 'image', title: 'Fatima', category: 'Results', src: '/images/results/fatima/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
+  { type: 'image', title: 'D.S.', category: 'Results', src: '/images/results/ds/WhatsApp Image 2026-04-17 at 2.33.15 PM.jpeg' },
 
   // ── MOVIE ────────────────────────────────────────────────────────────────────
   { type: 'image', title: 'Movie Outing', category: 'Movie', src: '/images/movie/WhatsApp Image 2026-04-15 at 11.46.00 AM.jpeg' },
