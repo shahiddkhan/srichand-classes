@@ -76,7 +76,7 @@ const FACULTY = [
   {
     id: 'kunal',
     name: 'Mr. Kunal Thariani',
-    subject: 'Science & Mathematics',
+    subject: 'Geometry & Mathematics',
     badge: 'Senior Faculty',
     badgeColor: 'bg-cyan-50 text-cyan-700 border-cyan-200',
     accentBg: 'from-cyan-900/80 to-cyan-600/40',
@@ -93,7 +93,7 @@ const FACULTY = [
   {
     id: 'vidhi',
     name: 'Mrs. Vidhi Dalal',
-    subject: 'English',
+    subject: 'English & OC',
     badge: 'Senior Faculty',
     badgeColor: 'bg-pink-50 text-pink-700 border-pink-200',
     accentBg: 'from-pink-900/80 to-pink-600/40',
