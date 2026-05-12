@@ -21,7 +21,7 @@ function Hero() {
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 mb-7">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="font-body text-white/90 text-sm font-medium">Admissions Open 2025–26</span>
+              <span className="font-body text-white/90 text-sm font-medium">Admissions Open</span>
             </div>
 
             <h1 className="font-heading font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6">
