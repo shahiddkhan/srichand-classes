@@ -88,6 +88,7 @@ const galleryData = [
   { type: 'image', title: 'SPL', category: 'SPL', src: '/images/spl/spl images/WhatsApp Image 2026-04-15 at 5.02.52 PM.jpeg' },
 
   // ── RESULTS ─────────────────────────────────────────────────────────────────
+  { type: 'image', title: 'SSC 2026', category: 'Results', src: '/images/results/ssc-2026/ssc2026.png' },
   { type: 'image', title: 'SSC 2025', category: 'Results', src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
   { type: 'image', title: 'SSC 2024', category: 'Results', src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
   { type: 'image', title: 'Class Topper', category: 'Results', src: '/images/results/harsh classes topper/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },

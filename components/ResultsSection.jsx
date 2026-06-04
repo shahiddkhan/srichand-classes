@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useLightbox } from './LightboxProvider'
 
 const RESULT_IMGS = [
+  { src: '/images/results/ssc-2026/ssc2026.png',                                                            title: 'SSC 2026' },
   { src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg',                          title: 'SSC 2025' },
   { src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg',                          title: 'SSC 2024' },
   { src: '/images/results/account_toppers/WhatsApp Image 2026-04-22 at 9.09.58 AM.jpeg',                   title: 'Accounts Toppers' },

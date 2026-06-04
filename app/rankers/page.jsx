@@ -9,6 +9,7 @@ const sortedRankers = [...rankersData].sort(
 )
 
 const SCHOOL_RESULTS = [
+  { label: 'SSC 2026',         src: '/images/results/ssc-2026/ssc2026.png' },
   { label: 'SSC 2025',         src: '/images/results/ssc-2025/WhatsApp Image 2026-04-17 at 2.33.12 PM.jpeg' },
   { label: 'SSC 2024',         src: '/images/results/ssc-2024/WhatsApp Image 2026-04-17 at 2.33.05 PM.jpeg' },
   { label: 'Account Toppers',  src: '/images/results/account_toppers/WhatsApp Image 2026-04-22 at 9.09.58 AM.jpeg' },
@@ -21,6 +22,24 @@ const SCHOOL_RESULTS = [
 ]
 
 const INDIVIDUAL_RESULTS = [
+  // --- SSC 2026 (highest → lowest) ---
+  '/images/results/individual image/22cc7978-b10c-4fe7-8147-cc86a9707ea4.jpg',          // Anushka Pujari  96.4%
+  '/images/results/individual image/4d61a43e-fd27-4f71-9070-2607d364afa3.jpg',          // Sriya Nadar     96.4%
+  '/images/results/individual image/0bcfce8e-e1ea-4a94-b88b-4180e695cc82.jpg',          // Hidaayah Khan   95.4%
+  '/images/results/individual image/191f99eb-b517-4dcc-8185-aeb33576f731.jpg',          // Swara Kumbhar   95.4%
+  '/images/results/individual image/4d433a91-6d33-4987-9746-7fb4ce65f2e1.jpg',          // Kimaya Hedalkar 95.2%
+  '/images/results/individual image/a95cdbb2-4f9d-4300-a32e-0706df6b040d.jpg',          // Lumbini Jadhav  93.8%
+  '/images/results/individual image/8ed4a74e-c770-4bb8-8feb-2744a5ea7cc2.jpg',          // Archi Keny      93.6%
+  '/images/results/individual image/a06001d9-98b0-4862-8b4e-804b5e498c9f.jpg',          // Saanvi Madvi    93.4%
+  '/images/results/individual image/5ae55dfa-af52-4cdd-93dd-6347612f32cc.jpg',          // Nandini Hajare  93.0%
+  '/images/results/individual image/8efc2989-4799-4608-9671-27679f903fbb.jpg',          // Jav Gosavi      92.0%
+  '/images/results/individual image/6220273d-eb02-4fe0-b31a-bc3135fa71a5.jpg',          // Nandika Bir     91.6%
+  '/images/results/individual image/ab10d331-8f3c-48ab-8af4-70ee0ee5fd5a.jpg',          // Swarup Kamble   91.4%
+  '/images/results/individual image/8ff304d0-48a6-4810-9a32-28075b8ff939.jpg',          // Caden Zalake    90.6%
+  '/images/results/individual image/823da29c-3d99-4110-ab74-f9138569821a.jpg',          // Snehin Godhwani 90.4%
+  '/images/results/individual image/cc3c53a0-f0ab-4771-b0fa-edee34f45fc9.jpg',          // Shreyash Trimukhe 90.2%
+  '/images/results/individual image/e1fb7e99-8a8b-4083-a049-21835dc72f0f.jpg',          // Arsalan Farooqui 90.2%
+  // --- SSC 2025 (existing order preserved) ---
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM (1).jpeg',  // Divya          95.8%
   '/images/results/individual image/WhatsApp Image 2026-04-22 at 2.41.26 PM (2).jpeg',  // Latika         95.4%
   '/images/results/individual image/WhatsApp Image 2026-04-17 at 2.33.06 PM.jpeg',      // Arjun          94.8%
